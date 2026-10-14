@@ -1,0 +1,230 @@
+{
+  "_about": "Predefined scenario suite for the EmergencyLink recommendation engine. Expectations were written from the documented rules BEFORE running the engine (README §16). All hospitals are fictional. Compact format is expanded by tests/scenario_loader.py. Resource tuple: a=availableCount, t=totalCount, age=minutes before referenceTime, v=verified, by=reporter, s=explicit status.",
+  "referenceTime": "2026-10-13T09:00:00Z",
+  "scenarios": [
+    {
+      "id": "S01", "category": "Ranking behaviour", "name": "Travel time decides when everything else is equal",
+      "case": {"requiredResources": [["icu_bed", 1]]},
+      "hospitals": [
+        {"id": "A", "eta": [10, 12, "live_traffic"], "resources": {"icu_bed": {"a": 3, "t": 10, "age": 5, "v": true}}},
+        {"id": "B", "eta": [20, 24, "live_traffic"], "resources": {"icu_bed": {"a": 3, "t": 10, "age": 5, "v": true}}}
+      ],
+      "expect": {"eligible": ["A", "B"], "rankOrder": ["A", "B"]}
+    },
+    {
+      "id": "S02", "category": "Eligibility correctness", "name": "High score can never compensate for a failed required capability",
+      "purpose": "A is closest, freshest and has most capacity but reports the required cath lab unavailable.",
+      "case": {"requiredResources": [["cath_lab", 1], ["icu_bed", 1]]},
+      "hospitals": [
+        {"id": "A", "eta": [4, 5, "live_traffic"], "resources": {"cath_lab": {"a": 0, "t": 2, "age": 2, "v": true}, "icu_bed": {"a": 10, "t": 20, "age": 2, "v": true}}},
+        {"id": "B", "eta": [40, 45, "live_traffic"], "resources": {"cath_lab": {"a": 1, "t": 1, "age": 50, "v": true}, "icu_bed": {"a": 1, "t": 5, "age": 25, "v": true}}}
+      ],
+      "expect": {"eligible": ["B"], "rankOrder": ["B"], "excluded": {"A": "reported unavailable: cath lab"}}
+    },
+    {
+      "id": "S03", "category": "Eligibility correctness", "name": "Missing required specialty excludes the hospital",
+      "case": {"requiredResources": [["er_bed", 1]], "requiredSpecialties": ["cardiology"]},
+      "hospitals": [
+        {"id": "A", "specialties": ["general medicine"], "eta": [5, 6, "live_traffic"], "resources": {"er_bed": {"a": 9, "t": 20, "age": 3, "v": true}}},
+        {"id": "B", "specialties": ["cardiology"], "eta": [15, 18, "live_traffic"], "resources": {"er_bed": {"a": 2, "t": 20, "age": 3, "v": true}}}
+      ],
+      "expect": {"eligible": ["B"], "excluded": {"A": "Required service not reported: cardiology"}}
+    },
+    {
+      "id": "S04", "category": "Eligibility correctness", "name": "Insufficient count for a multi-unit requirement",
+      "case": {"requiredResources": [["er_bed", 3]]},
+      "hospitals": [
+        {"id": "A", "eta": [5, 6, "live_traffic"], "resources": {"er_bed": {"a": 2, "t": 20, "age": 3, "v": true}}},
+        {"id": "B", "eta": [15, 18, "live_traffic"], "resources": {"er_bed": {"a": 3, "t": 20, "age": 3, "v": true}}}
+      ],
+      "expect": {"eligible": ["B"], "excluded": {"A": "Insufficient ER bed: 2 reported, 3 required"}}
+    },
+    {
+      "id": "S05", "category": "Stale data handling", "name": "Stale report stays eligible but is flagged and ranked lower",
+      "case": {"requiredResources": [["icu_bed", 1]]},
+      "hospitals": [
+        {"id": "A", "eta": [10, 12, "live_traffic"], "resources": {"icu_bed": {"a": 3, "t": 10, "age": 90, "v": true}}},
+        {"id": "B", "eta": [10, 12, "live_traffic"], "resources": {"icu_bed": {"a": 3, "t": 10, "age": 10, "v": true}}}
+      ],
+      "expect": {"eligible": ["A", "B"], "rankOrder": ["B", "A"], "flags": {"A": ["STALE"]}}
+    },
+    {
+      "id": "S06", "category": "Stale data handling", "name": "Expired report is never treated as available",
+      "purpose": "ICU-bed window is 30/120 min; a 200-minute-old 'available' must become 'needs reconfirmation'.",
+      "case": {"requiredResources": [["icu_bed", 1]]},
+      "hospitals": [
+        {"id": "A", "eta": [5, 6, "live_traffic"], "resources": {"icu_bed": {"a": 8, "t": 10, "age": 200, "v": true}}},
+        {"id": "B", "eta": [20, 25, "live_traffic"], "resources": {"icu_bed": {"a": 1, "t": 10, "age": 10, "v": true}}}
+      ],
+      "expect": {"eligible": ["B"], "needsConfirmation": ["A"], "ncReasonContains": {"A": "report expired"}}
+    },
+    {
+      "id": "S07", "category": "Unknown data handling", "name": "No report on record means unknown, not available",
+      "case": {"requiredResources": [["icu_bed", 1], ["er_bed", 1]]},
+      "hospitals": [
+        {"id": "A", "eta": [5, 6, "live_traffic"], "resources": {"er_bed": {"a": 8, "t": 20, "age": 5, "v": true}}},
+        {"id": "B", "eta": [20, 25, "live_traffic"], "resources": {"icu_bed": {"a": 1, "t": 10, "age": 10, "v": true}, "er_bed": {"a": 2, "t": 10, "age": 10, "v": true}}}
+      ],
+      "expect": {"eligible": ["B"], "needsConfirmation": ["A"], "ncReasonContains": {"A": "Availability unknown"}}
+    },
+    {
+      "id": "S08", "category": "Conflicting data handling", "name": "Conflicting reports from different staff require review",
+      "case": {"requiredResources": [["ct_scanner", 1]]},
+      "hospitals": [
+        {"id": "A", "eta": [5, 6, "live_traffic"], "resources": {"ct_scanner": {"a": 1, "t": 1, "age": 5, "v": true, "by": "a.radiology"}},
+         "extraSnapshots": [{"resourceType": "ct_scanner", "a": 0, "t": 1, "age": 12, "v": false, "by": "a.er-desk"}]},
+        {"id": "B", "eta": [20, 25, "live_traffic"], "resources": {"ct_scanner": {"a": 1, "t": 1, "age": 30, "v": true}}}
+      ],
+      "expect": {"eligible": ["B"], "needsConfirmation": ["A"], "flags": {"A": ["CONFLICTING"]}}
+    },
+    {
+      "id": "S09", "category": "Conflicting data handling", "name": "Same reporter correcting a value is an update, not a conflict",
+      "case": {"requiredResources": [["ct_scanner", 1]]},
+      "hospitals": [
+        {"id": "A", "eta": [5, 6, "live_traffic"], "resources": {"ct_scanner": {"a": 1, "t": 1, "age": 5, "v": true, "by": "a.radiology"}},
+         "extraSnapshots": [{"resourceType": "ct_scanner", "a": 0, "t": 1, "age": 20, "v": true, "by": "a.radiology"}]}
+      ],
+      "expect": {"eligible": ["A"], "rankOrder": ["A"]}
+    },
+    {
+      "id": "S10", "category": "Eligibility correctness", "name": "Closed / diverting hospitals are excluded",
+      "case": {"requiredResources": [["er_bed", 1]]},
+      "hospitals": [
+        {"id": "A", "status": "diverting", "eta": [3, 4, "live_traffic"], "resources": {"er_bed": {"a": 5, "t": 10, "age": 2, "v": true}}},
+        {"id": "B", "status": "closed", "eta": [3, 4, "live_traffic"], "resources": {"er_bed": {"a": 5, "t": 10, "age": 2, "v": true}}},
+        {"id": "C", "eta": [25, 30, "live_traffic"], "resources": {"er_bed": {"a": 1, "t": 10, "age": 20, "v": true}}}
+      ],
+      "expect": {"eligible": ["C"], "excluded": {"A": "diversion", "B": "closed"}}
+    },
+    {
+      "id": "S11", "category": "Referral workflow", "name": "Rejected referral excludes; pending referral is flagged",
+      "case": {"requiredResources": [["er_bed", 1]]},
+      "hospitals": [
+        {"id": "A", "eta": [5, 6, "live_traffic"], "resources": {"er_bed": {"a": 5, "t": 10, "age": 2, "v": true}}},
+        {"id": "B", "eta": [10, 12, "live_traffic"], "resources": {"er_bed": {"a": 5, "t": 10, "age": 2, "v": true}}},
+        {"id": "C", "eta": [20, 22, "live_traffic"], "resources": {"er_bed": {"a": 5, "t": 10, "age": 2, "v": true}}}
+      ],
+      "referralHistory": [
+        {"hospitalId": "A", "requestStatus": "rejected", "requestedAt": "2026-10-13T08:50:00Z", "responseAt": "2026-10-13T08:54:00Z"},
+        {"hospitalId": "C", "requestStatus": "sent", "requestedAt": "2026-10-13T08:58:00Z"}
+      ],
+      "expect": {"eligible": ["B", "C"], "rankOrder": ["B", "C"], "excluded": {"A": "Rejected this referral"}, "flags": {"C": ["REFERRAL_PENDING"]}}
+    },
+    {
+      "id": "S12", "category": "Ranking behaviour", "name": "Hospital-confirmed data outranks identical unconfirmed data",
+      "case": {"requiredResources": [["icu_bed", 1]]},
+      "hospitals": [
+        {"id": "A", "eta": [10, 12, "live_traffic"], "resources": {"icu_bed": {"a": 3, "t": 10, "age": 10, "v": true}}},
+        {"id": "B", "eta": [10, 12, "live_traffic"], "resources": {"icu_bed": {"a": 3, "t": 10, "age": 10, "v": false}}}
+      ],
+      "expect": {"eligible": ["A", "B"], "rankOrder": ["A", "B"], "flags": {"B": ["UNCONFIRMED"]}}
+    },
+    {
+      "id": "S13", "category": "Unknown data handling", "name": "Unknown travel time never lifts a hospital above complete-data candidates",
+      "case": {"requiredResources": [["icu_bed", 1]]},
+      "hospitals": [
+        {"id": "A", "noLocation": true, "resources": {"icu_bed": {"a": 9, "t": 10, "age": 2, "v": true}}},
+        {"id": "B", "eta": [40, 50, "map_routing"], "resources": {"icu_bed": {"a": 1, "t": 10, "age": 25, "v": true}}}
+      ],
+      "expect": {"eligible": ["A", "B"], "rankOrder": ["B", "A"], "scoreComplete": {"A": false, "B": true}, "flags": {"A": ["ETA_UNKNOWN"]}}
+    },
+    {
+      "id": "S14", "category": "Safety", "name": "No eligible candidate produces an explicit warning",
+      "case": {"requiredResources": [["icu_bed", 1]]},
+      "hospitals": [
+        {"id": "A", "eta": [5, 6, "live_traffic"], "resources": {"icu_bed": {"a": 0, "t": 10, "age": 5, "v": true}}},
+        {"id": "B", "eta": [5, 6, "live_traffic"], "resources": {}}
+      ],
+      "expect": {"eligible": [], "needsConfirmation": ["B"], "excluded": {"A": "reported unavailable"}, "warningsContain": ["No eligible candidate"]}
+    },
+    {
+      "id": "S15", "category": "Determinism", "name": "Equal scores tie-break on conservative ETA",
+      "purpose": "Both ETAs are under the 8-min 'best' threshold so travel scores are both 100; B has the lower upper bound.",
+      "case": {"requiredResources": [["er_bed", 1]]},
+      "hospitals": [
+        {"id": "A", "eta": [3, 7, "live_traffic"], "resources": {"er_bed": {"a": 5, "t": 10, "age": 5, "v": true}}},
+        {"id": "B", "eta": [2, 5, "live_traffic"], "resources": {"er_bed": {"a": 5, "t": 10, "age": 5, "v": true}}}
+      ],
+      "expect": {"eligible": ["A", "B"], "rankOrder": ["B", "A"], "flags": {"A": ["NEAR_TIE"], "B": ["NEAR_TIE"]}}
+    },
+    {
+      "id": "S16", "category": "Determinism", "name": "Fully identical hospitals order by hospitalId regardless of input order",
+      "case": {"requiredResources": [["er_bed", 1]]},
+      "hospitals": [
+        {"id": "B", "eta": [10, 12, "live_traffic"], "resources": {"er_bed": {"a": 5, "t": 10, "age": 5, "v": true}}},
+        {"id": "A", "eta": [10, 12, "live_traffic"], "resources": {"er_bed": {"a": 5, "t": 10, "age": 5, "v": true}}}
+      ],
+      "expect": {"eligible": ["A", "B"], "rankOrder": ["A", "B"]}
+    },
+    {
+      "id": "S17", "category": "Data quality", "name": "Future-dated report (device clock error) is ignored",
+      "case": {"requiredResources": [["icu_bed", 1]]},
+      "hospitals": [
+        {"id": "A", "eta": [5, 6, "live_traffic"], "resources": {"icu_bed": {"a": 9, "t": 10, "age": -60, "v": false}}}
+      ],
+      "expect": {"eligible": [], "needsConfirmation": ["A"], "flags": {"A": ["FUTURE_TIMESTAMP"]}, "warningsContain": ["future-dated"]}
+    },
+    {
+      "id": "S18", "category": "Stale data handling", "name": "Stale 'unavailable' excludes; expired 'unavailable' needs confirmation",
+      "case": {"requiredResources": [["icu_bed", 1]]},
+      "hospitals": [
+        {"id": "A", "eta": [5, 6, "live_traffic"], "resources": {"icu_bed": {"a": 0, "t": 10, "age": 60, "v": true}}},
+        {"id": "B", "eta": [5, 6, "live_traffic"], "resources": {"icu_bed": {"a": 0, "t": 10, "age": 300, "v": true}}}
+      ],
+      "expect": {"eligible": [], "needsConfirmation": ["B"], "excluded": {"A": "report is stale"}}
+    },
+    {
+      "id": "S19", "category": "Ranking behaviour", "name": "More capacity headroom ranks higher",
+      "case": {"requiredResources": [["icu_bed", 1]]},
+      "hospitals": [
+        {"id": "A", "eta": [10, 12, "live_traffic"], "resources": {"icu_bed": {"a": 1, "t": 10, "age": 10, "v": true}}},
+        {"id": "B", "eta": [10, 12, "live_traffic"], "resources": {"icu_bed": {"a": 4, "t": 10, "age": 10, "v": true}}}
+      ],
+      "expect": {"eligible": ["A", "B"], "rankOrder": ["B", "A"]}
+    },
+    {
+      "id": "S20", "category": "Ranking behaviour", "name": "Preferred (non-mandatory) capability raises capability match",
+      "case": {"requiredResources": [["icu_bed", 1]], "preferredResources": ["ventilator"]},
+      "hospitals": [
+        {"id": "A", "eta": [10, 12, "live_traffic"], "resources": {"icu_bed": {"a": 3, "t": 10, "age": 10, "v": true}, "ventilator": {"a": 2, "t": 5, "age": 10, "v": true}}},
+        {"id": "B", "eta": [10, 12, "live_traffic"], "resources": {"icu_bed": {"a": 3, "t": 10, "age": 10, "v": true}}}
+      ],
+      "expect": {"eligible": ["A", "B"], "rankOrder": ["A", "B"]}
+    },
+    {
+      "id": "S21", "category": "Unknown data handling", "name": "Explicit 'unknown' status needs confirmation",
+      "case": {"requiredResources": [["icu_bed", 1]]},
+      "hospitals": [
+        {"id": "A", "eta": [5, 6, "live_traffic"], "resources": {"icu_bed": {"a": null, "t": 10, "age": 5, "v": true, "s": "unknown"}}}
+      ],
+      "expect": {"eligible": [], "needsConfirmation": ["A"]}
+    },
+    {
+      "id": "S22", "category": "Unknown data handling", "name": "'Available' without a count cannot satisfy a count requirement",
+      "case": {"requiredResources": [["icu_bed", 1]]},
+      "hospitals": [
+        {"id": "A", "eta": [5, 6, "live_traffic"], "resources": {"icu_bed": {"a": null, "t": 10, "age": 5, "v": true, "s": "available"}}}
+      ],
+      "expect": {"eligible": [], "needsConfirmation": ["A"], "ncReasonContains": {"A": "Availability unknown"}}
+    },
+    {
+      "id": "S23", "category": "Ranking behaviour", "name": "Live-traffic ETA range scored on its upper bound",
+      "purpose": "A's point estimate (12 min, map routing) widens to 12-16.2; B's live range 13-15 has the lower upper bound.",
+      "case": {"requiredResources": [["er_bed", 1]]},
+      "hospitals": [
+        {"id": "A", "eta": [12, null, "map_routing"], "resources": {"er_bed": {"a": 5, "t": 10, "age": 5, "v": true}}},
+        {"id": "B", "eta": [13, 15, "live_traffic"], "resources": {"er_bed": {"a": 5, "t": 10, "age": 5, "v": true}}}
+      ],
+      "expect": {"eligible": ["A", "B"], "rankOrder": ["B", "A"]}
+    },
+    {
+      "id": "S24", "category": "Stale data handling", "name": "Freshness windows are resource-specific",
+      "purpose": "90-minute-old reports: ER bed (30/120) is stale, CT scanner (120/480) is still fresh.",
+      "case": {"requiredResources": [["er_bed", 1], ["ct_scanner", 1]]},
+      "hospitals": [
+        {"id": "A", "eta": [10, 12, "live_traffic"], "resources": {"er_bed": {"a": 5, "t": 10, "age": 90, "v": true}, "ct_scanner": {"a": 1, "t": 1, "age": 90, "v": true}}}
+      ],
+      "expect": {"eligible": ["A"], "flags": {"A": ["STALE"]}, "flagCount": {"A:STALE": 1}}
+    }
+  ]
+}

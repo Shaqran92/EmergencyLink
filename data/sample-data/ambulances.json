@@ -1,0 +1,90 @@
+[
+  {
+    "ambulanceId": "AMB-01",
+    "hospitalId": "H01",
+    "status": "available",
+    "lastKnownLocation": {
+      "lat": 24.861,
+      "lng": 67.04
+    },
+    "lastUpdatedAt": "2026-10-13T08:57:00Z",
+    "fictional": true
+  },
+  {
+    "ambulanceId": "AMB-02",
+    "hospitalId": "H02",
+    "status": "assigned",
+    "lastKnownLocation": {
+      "lat": 24.82,
+      "lng": 67.031
+    },
+    "lastUpdatedAt": "2026-10-13T08:58:00Z",
+    "fictional": true
+  },
+  {
+    "ambulanceId": "AMB-03",
+    "hospitalId": "H03",
+    "status": "available",
+    "lastKnownLocation": {
+      "lat": 24.948,
+      "lng": 67.059
+    },
+    "lastUpdatedAt": "2026-10-13T08:54:00Z",
+    "fictional": true
+  },
+  {
+    "ambulanceId": "AMB-04",
+    "hospitalId": "H05",
+    "status": "en_route",
+    "lastKnownLocation": {
+      "lat": 24.895,
+      "lng": 67.028
+    },
+    "lastUpdatedAt": "2026-10-13T08:59:00Z",
+    "fictional": true
+  },
+  {
+    "ambulanceId": "AMB-05",
+    "hospitalId": "H06",
+    "status": "available",
+    "lastKnownLocation": {
+      "lat": 24.921,
+      "lng": 67.088
+    },
+    "lastUpdatedAt": "2026-10-13T08:48:00Z",
+    "fictional": true
+  },
+  {
+    "ambulanceId": "AMB-06",
+    "hospitalId": "H09",
+    "status": "unavailable",
+    "lastKnownLocation": {
+      "lat": 25.001,
+      "lng": 67.149
+    },
+    "lastUpdatedAt": "2026-10-13T08:15:00Z",
+    "fictional": true
+  },
+  {
+    "ambulanceId": "AMB-07",
+    "hospitalId": "H11",
+    "status": "available",
+    "lastKnownLocation": {
+      "lat": 24.852,
+      "lng": 66.992
+    },
+    "lastUpdatedAt": "2026-10-13T08:56:00Z",
+    "fictional": true
+  },
+  {
+    "ambulanceId": "AMB-08",
+    "hospitalId": null,
+    "status": "available",
+    "lastKnownLocation": {
+      "lat": 24.88,
+      "lng": 67.05
+    },
+    "lastUpdatedAt": "2026-10-13T08:52:00Z",
+    "fictional": true
+  }
+]

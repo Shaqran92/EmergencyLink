@@ -1,0 +1,682 @@
+[
+  {
+    "referralId": "RF-0001",
+    "caseId": "EL-H0001",
+    "hospitalId": "H01",
+    "requestStatus": "accepted",
+    "requestedAt": "2026-10-04T15:15:00Z",
+    "responseAt": "2026-10-04T15:18:22.821735Z",
+    "respondedBy": "h01.ops",
+    "fictional": true
+  },
+  {
+    "referralId": "RF-0002",
+    "caseId": "EL-H0002",
+    "hospitalId": "H01",
+    "requestStatus": "accepted",
+    "requestedAt": "2026-09-17T04:08:00Z",
+    "responseAt": "2026-09-17T04:09:53.603157Z",
+    "respondedBy": "h01.ops",
+    "fictional": true
+  },
+  {
+    "referralId": "RF-0003",
+    "caseId": "EL-H0003",
+    "hospitalId": "H01",
+    "requestStatus": "accepted",
+    "requestedAt": "2026-10-08T20:10:00Z",
+    "responseAt": "2026-10-08T20:13:35.170320Z",
+    "respondedBy": "h01.ops",
+    "fictional": true
+  },
+  {
+    "referralId": "RF-0004",
+    "caseId": "EL-H0004",
+    "hospitalId": "H01",
+    "requestStatus": "accepted",
+    "requestedAt": "2026-09-23T22:59:00Z",
+    "responseAt": "2026-09-23T23:03:19.776639Z",
+    "respondedBy": "h01.ops",
+    "fictional": true
+  },
+  {
+    "referralId": "RF-0005",
+    "caseId": "EL-H0005",
+    "hospitalId": "H01",
+    "requestStatus": "accepted",
+    "requestedAt": "2026-09-29T12:54:00Z",
+    "responseAt": "2026-09-29T12:58:29.933732Z",
+    "respondedBy": "h01.ops",
+    "fictional": true
+  },
+  {
+    "referralId": "RF-0006",
+    "caseId": "EL-H0006",
+    "hospitalId": "H01",
+    "requestStatus": "accepted",
+    "requestedAt": "2026-09-22T00:37:00Z",
+    "responseAt": "2026-09-22T00:42:40.904939Z",
+    "respondedBy": "h01.ops",
+    "fictional": true
+  },
+  {
+    "referralId": "RF-0007",
+    "caseId": "EL-H0007",
+    "hospitalId": "H01",
+    "requestStatus": "accepted",
+    "requestedAt": "2026-10-07T20:21:00Z",
+    "responseAt": "2026-10-07T20:25:19.218752Z",
+    "respondedBy": "h01.ops",
+    "fictional": true
+  },
+  {
+    "referralId": "RF-0008",
+    "caseId": "EL-H0008",
+    "hospitalId": "H01",
+    "requestStatus": "accepted",
+    "requestedAt": "2026-09-26T11:48:00Z",
+    "responseAt": "2026-09-26T11:51:51.713718Z",
+    "respondedBy": "h01.ops",
+    "fictional": true
+  },
+  {
+    "referralId": "RF-0009",
+    "caseId": "EL-H0009",
+    "hospitalId": "H01",
+    "requestStatus": "accepted",
+    "requestedAt": "2026-09-30T20:54:00Z",
+    "responseAt": "2026-09-30T21:00:03.928522Z",
+    "respondedBy": "h01.ops",
+    "fictional": true
+  },
+  {
+    "referralId": "RF-0010",
+    "caseId": "EL-H0010",
+    "hospitalId": "H01",
+    "requestStatus": "accepted",
+    "requestedAt": "2026-09-29T16:28:00Z",
+    "responseAt": "2026-09-29T16:30:12.198218Z",
+    "respondedBy": "h01.ops",
+    "fictional": true
+  },
+  {
+    "referralId": "RF-0011",
+    "caseId": "EL-H0011",
+    "hospitalId": "H01",
+    "requestStatus": "rejected",
+    "requestedAt": "2026-09-15T18:36:00Z",
+    "responseAt": "2026-09-15T18:38:55.444936Z",
+    "respondedBy": "h01.ops",
+    "fictional": true
+  },
+  {
+    "referralId": "RF-0012",
+    "caseId": "EL-H0012",
+    "hospitalId": "H01",
+    "requestStatus": "accepted",
+    "requestedAt": "2026-10-02T22:28:00Z",
+    "responseAt": "2026-10-02T22:34:27.870795Z",
+    "respondedBy": "h01.ops",
+    "fictional": true
+  },
+  {
+    "referralId": "RF-0013",
+    "caseId": "EL-H0013",
+    "hospitalId": "H01",
+    "requestStatus": "accepted",
+    "requestedAt": "2026-09-15T11:33:00Z",
+    "responseAt": "2026-09-15T11:33:30Z",
+    "respondedBy": "h01.ops",
+    "fictional": true
+  },
+  {
+    "referralId": "RF-0014",
+    "caseId": "EL-H0014",
+    "hospitalId": "H01",
+    "requestStatus": "accepted",
+    "requestedAt": "2026-09-26T16:21:00Z",
+    "responseAt": "2026-09-26T16:24:09.407552Z",
+    "respondedBy": "h01.ops",
+    "fictional": true
+  },
+  {
+    "referralId": "RF-0015",
+    "caseId": "EL-H0015",
+    "hospitalId": "H02",
+    "requestStatus": "accepted",
+    "requestedAt": "2026-10-02T09:58:00Z",
+    "responseAt": "2026-10-02T10:05:56.706810Z",
+    "respondedBy": "h02.ops",
+    "fictional": true
+  },
+  {
+    "referralId": "RF-0016",
+    "caseId": "EL-H0016",
+    "hospitalId": "H02",
+    "requestStatus": "rejected",
+    "requestedAt": "2026-09-23T23:57:00Z",
+    "responseAt": "2026-09-24T00:03:43.125058Z",
+    "respondedBy": "h02.ops",
+    "fictional": true
+  },
+  {
+    "referralId": "RF-0017",
+    "caseId": "EL-H0017",
+    "hospitalId": "H02",
+    "requestStatus": "accepted",
+    "requestedAt": "2026-10-06T10:33:00Z",
+    "responseAt": "2026-10-06T10:40:10.450230Z",
+    "respondedBy": "h02.ops",
+    "fictional": true
+  },
+  {
+    "referralId": "RF-0018",
+    "caseId": "EL-H0018",
+    "hospitalId": "H02",
+    "requestStatus": "accepted",
+    "requestedAt": "2026-10-10T06:08:00Z",
+    "responseAt": "2026-10-10T06:16:55.773956Z",
+    "respondedBy": "h02.ops",
+    "fictional": true
+  },
+  {
+    "referralId": "RF-0019",
+    "caseId": "EL-H0019",
+    "hospitalId": "H02",
+    "requestStatus": "accepted",
+    "requestedAt": "2026-09-14T03:44:00Z",
+    "responseAt": "2026-09-14T03:56:02.630539Z",
+    "respondedBy": "h02.ops",
+    "fictional": true
+  },
+  {
+    "referralId": "RF-0020",
+    "caseId": "EL-H0020",
+    "hospitalId": "H02",
+    "requestStatus": "rejected",
+    "requestedAt": "2026-09-16T07:00:00Z",
+    "responseAt": "2026-09-16T07:03:34.668661Z",
+    "respondedBy": "h02.ops",
+    "fictional": true
+  },
+  {
+    "referralId": "RF-0021",
+    "caseId": "EL-H0021",
+    "hospitalId": "H02",
+    "requestStatus": "accepted",
+    "requestedAt": "2026-09-19T16:12:00Z",
+    "responseAt": "2026-09-19T16:18:52.147539Z",
+    "respondedBy": "h02.ops",
+    "fictional": true
+  },
+  {
+    "referralId": "RF-0022",
+    "caseId": "EL-H0022",
+    "hospitalId": "H02",
+    "requestStatus": "rejected",
+    "requestedAt": "2026-09-29T03:24:00Z",
+    "responseAt": "2026-09-29T03:35:44.112357Z",
+    "respondedBy": "h02.ops",
+    "fictional": true
+  },
+  {
+    "referralId": "RF-0023",
+    "caseId": "EL-H0023",
+    "hospitalId": "H02",
+    "requestStatus": "rejected",
+    "requestedAt": "2026-09-24T10:13:00Z",
+    "responseAt": "2026-09-24T10:22:09.091379Z",
+    "respondedBy": "h02.ops",
+    "fictional": true
+  },
+  {
+    "referralId": "RF-0024",
+    "caseId": "EL-H0024",
+    "hospitalId": "H02",
+    "requestStatus": "accepted",
+    "requestedAt": "2026-09-15T14:25:00Z",
+    "responseAt": "2026-09-15T14:30:18.348233Z",
+    "respondedBy": "h02.ops",
+    "fictional": true
+  },
+  {
+    "referralId": "RF-0025",
+    "caseId": "EL-H0025",
+    "hospitalId": "H02",
+    "requestStatus": "accepted",
+    "requestedAt": "2026-09-19T21:20:00Z",
+    "responseAt": "2026-09-19T21:25:33.950369Z",
+    "respondedBy": "h02.ops",
+    "fictional": true
+  },
+  {
+    "referralId": "RF-0026",
+    "caseId": "EL-H0026",
+    "hospitalId": "H03",
+    "requestStatus": "rejected",
+    "requestedAt": "2026-10-03T07:21:00Z",
+    "responseAt": "2026-10-03T07:27:36.564210Z",
+    "respondedBy": "h03.ops",
+    "fictional": true
+  },
+  {
+    "referralId": "RF-0027",
+    "caseId": "EL-H0027",
+    "hospitalId": "H03",
+    "requestStatus": "accepted",
+    "requestedAt": "2026-10-09T10:26:00Z",
+    "responseAt": "2026-10-09T10:30:07.228727Z",
+    "respondedBy": "h03.ops",
+    "fictional": true
+  },
+  {
+    "referralId": "RF-0028",
+    "caseId": "EL-H0028",
+    "hospitalId": "H03",
+    "requestStatus": "accepted",
+    "requestedAt": "2026-09-27T15:34:00Z",
+    "responseAt": "2026-09-27T15:40:38.849725Z",
+    "respondedBy": "h03.ops",
+    "fictional": true
+  },
+  {
+    "referralId": "RF-0029",
+    "caseId": "EL-H0029",
+    "hospitalId": "H03",
+    "requestStatus": "accepted",
+    "requestedAt": "2026-10-11T14:31:00Z",
+    "responseAt": "2026-10-11T14:35:17.416504Z",
+    "respondedBy": "h03.ops",
+    "fictional": true
+  },
+  {
+    "referralId": "RF-0030",
+    "caseId": "EL-H0030",
+    "hospitalId": "H03",
+    "requestStatus": "accepted",
+    "requestedAt": "2026-09-27T20:41:00Z",
+    "responseAt": "2026-09-27T20:45:17.116591Z",
+    "respondedBy": "h03.ops",
+    "fictional": true
+  },
+  {
+    "referralId": "RF-0031",
+    "caseId": "EL-H0031",
+    "hospitalId": "H03",
+    "requestStatus": "accepted",
+    "requestedAt": "2026-10-02T17:51:00Z",
+    "responseAt": "2026-10-02T17:57:16.131482Z",
+    "respondedBy": "h03.ops",
+    "fictional": true
+  },
+  {
+    "referralId": "RF-0032",
+    "caseId": "EL-H0032",
+    "hospitalId": "H03",
+    "requestStatus": "rejected",
+    "requestedAt": "2026-10-02T23:43:00Z",
+    "responseAt": "2026-10-02T23:46:52.650481Z",
+    "respondedBy": "h03.ops",
+    "fictional": true
+  },
+  {
+    "referralId": "RF-0033",
+    "caseId": "EL-H0033",
+    "hospitalId": "H03",
+    "requestStatus": "accepted",
+    "requestedAt": "2026-09-23T08:41:00Z",
+    "responseAt": "2026-09-23T08:45:18.403997Z",
+    "respondedBy": "h03.ops",
+    "fictional": true
+  },
+  {
+    "referralId": "RF-0034",
+    "caseId": "EL-H0034",
+    "hospitalId": "H03",
+    "requestStatus": "accepted",
+    "requestedAt": "2026-10-01T06:56:00Z",
+    "responseAt": "2026-10-01T07:00:20.067369Z",
+    "respondedBy": "h03.ops",
+    "fictional": true
+  },
+  {
+    "referralId": "RF-0035",
+    "caseId": "EL-H0035",
+    "hospitalId": "H03",
+    "requestStatus": "accepted",
+    "requestedAt": "2026-10-10T20:01:00Z",
+    "responseAt": "2026-10-10T20:06:17.825789Z",
+    "respondedBy": "h03.ops",
+    "fictional": true
+  },
+  {
+    "referralId": "RF-0036",
+    "caseId": "EL-H0036",
+    "hospitalId": "H03",
+    "requestStatus": "accepted",
+    "requestedAt": "2026-10-09T19:05:00Z",
+    "responseAt": "2026-10-09T19:13:07.746943Z",
+    "respondedBy": "h03.ops",
+    "fictional": true
+  },
+  {
+    "referralId": "RF-0037",
+    "caseId": "EL-H0037",
+    "hospitalId": "H03",
+    "requestStatus": "accepted",
+    "requestedAt": "2026-09-23T15:28:00Z",
+    "responseAt": "2026-09-23T15:31:35.907688Z",
+    "respondedBy": "h03.ops",
+    "fictional": true
+  },
+  {
+    "referralId": "RF-0038",
+    "caseId": "EL-H0038",
+    "hospitalId": "H05",
+    "requestStatus": "rejected",
+    "requestedAt": "2026-10-08T23:13:00Z",
+    "responseAt": "2026-10-08T23:15:45.679904Z",
+    "respondedBy": "h05.ops",
+    "fictional": true
+  },
+  {
+    "referralId": "RF-0039",
+    "caseId": "EL-H0039",
+    "hospitalId": "H05",
+    "requestStatus": "accepted",
+    "requestedAt": "2026-09-16T03:10:00Z",
+    "responseAt": "2026-09-16T03:13:12.485831Z",
+    "respondedBy": "h05.ops",
+    "fictional": true
+  },
+  {
+    "referralId": "RF-0040",
+    "caseId": "EL-H0040",
+    "hospitalId": "H05",
+    "requestStatus": "accepted",
+    "requestedAt": "2026-10-03T04:00:00Z",
+    "responseAt": "2026-10-03T04:02:50.910113Z",
+    "respondedBy": "h05.ops",
+    "fictional": true
+  },
+  {
+    "referralId": "RF-0041",
+    "caseId": "EL-H0041",
+    "hospitalId": "H05",
+    "requestStatus": "accepted",
+    "requestedAt": "2026-10-07T12:29:00Z",
+    "responseAt": "2026-10-07T12:30:54.896515Z",
+    "respondedBy": "h05.ops",
+    "fictional": true
+  },
+  {
+    "referralId": "RF-0042",
+    "caseId": "EL-H0042",
+    "hospitalId": "H05",
+    "requestStatus": "accepted",
+    "requestedAt": "2026-09-15T01:46:00Z",
+    "responseAt": "2026-09-15T01:47:11.372836Z",
+    "respondedBy": "h05.ops",
+    "fictional": true
+  },
+  {
+    "referralId": "RF-0043",
+    "caseId": "EL-H0043",
+    "hospitalId": "H05",
+    "requestStatus": "rejected",
+    "requestedAt": "2026-10-10T15:00:00Z",
+    "responseAt": "2026-10-10T15:02:28.246621Z",
+    "respondedBy": "h05.ops",
+    "fictional": true
+  },
+  {
+    "referralId": "RF-0044",
+    "caseId": "EL-H0044",
+    "hospitalId": "H05",
+    "requestStatus": "accepted",
+    "requestedAt": "2026-09-25T01:24:00Z",
+    "responseAt": "2026-09-25T01:28:42.446106Z",
+    "respondedBy": "h05.ops",
+    "fictional": true
+  },
+  {
+    "referralId": "RF-0045",
+    "caseId": "EL-H0045",
+    "hospitalId": "H05",
+    "requestStatus": "accepted",
+    "requestedAt": "2026-10-05T13:55:00Z",
+    "responseAt": "2026-10-05T13:57:53.845756Z",
+    "respondedBy": "h05.ops",
+    "fictional": true
+  },
+  {
+    "referralId": "RF-0046",
+    "caseId": "EL-H0046",
+    "hospitalId": "H05",
+    "requestStatus": "accepted",
+    "requestedAt": "2026-10-08T09:56:00Z",
+    "responseAt": "2026-10-08T09:59:26.934478Z",
+    "respondedBy": "h05.ops",
+    "fictional": true
+  },
+  {
+    "referralId": "RF-0047",
+    "caseId": "EL-H0047",
+    "hospitalId": "H05",
+    "requestStatus": "accepted",
+    "requestedAt": "2026-09-28T13:48:00Z",
+    "responseAt": "2026-09-28T13:51:25.523309Z",
+    "respondedBy": "h05.ops",
+    "fictional": true
+  },
+  {
+    "referralId": "RF-0048",
+    "caseId": "EL-H0048",
+    "hospitalId": "H05",
+    "requestStatus": "accepted",
+    "requestedAt": "2026-10-07T00:08:00Z",
+    "responseAt": "2026-10-07T00:11:00.009634Z",
+    "respondedBy": "h05.ops",
+    "fictional": true
+  },
+  {
+    "referralId": "RF-0049",
+    "caseId": "EL-H0049",
+    "hospitalId": "H05",
+    "requestStatus": "accepted",
+    "requestedAt": "2026-09-15T23:03:00Z",
+    "responseAt": "2026-09-15T23:09:15.435972Z",
+    "respondedBy": "h05.ops",
+    "fictional": true
+  },
+  {
+    "referralId": "RF-0050",
+    "caseId": "EL-H0050",
+    "hospitalId": "H05",
+    "requestStatus": "accepted",
+    "requestedAt": "2026-10-03T04:01:00Z",
+    "responseAt": "2026-10-03T04:04:16.318553Z",
+    "respondedBy": "h05.ops",
+    "fictional": true
+  },
+  {
+    "referralId": "RF-0051",
+    "caseId": "EL-H0051",
+    "hospitalId": "H05",
+    "requestStatus": "accepted",
+    "requestedAt": "2026-09-30T14:45:00Z",
+    "responseAt": "2026-09-30T14:49:02.731820Z",
+    "respondedBy": "h05.ops",
+    "fictional": true
+  },
+  {
+    "referralId": "RF-0052",
+    "caseId": "EL-H0052",
+    "hospitalId": "H05",
+    "requestStatus": "accepted",
+    "requestedAt": "2026-09-28T17:37:00Z",
+    "responseAt": "2026-09-28T17:39:35.688810Z",
+    "respondedBy": "h05.ops",
+    "fictional": true
+  },
+  {
+    "referralId": "RF-0053",
+    "caseId": "EL-H0053",
+    "hospitalId": "H04",
+    "requestStatus": "accepted",
+    "requestedAt": "2026-10-06T05:09:00Z",
+    "responseAt": "2026-10-06T05:16:14.432360Z",
+    "respondedBy": "h04.ops",
+    "fictional": true
+  },
+  {
+    "referralId": "RF-0054",
+    "caseId": "EL-H0054",
+    "hospitalId": "H04",
+    "requestStatus": "accepted",
+    "requestedAt": "2026-09-23T13:17:00Z",
+    "responseAt": "2026-09-23T13:23:48.315952Z",
+    "respondedBy": "h04.ops",
+    "fictional": true
+  },
+  {
+    "referralId": "RF-0055",
+    "caseId": "EL-H0055",
+    "hospitalId": "H04",
+    "requestStatus": "accepted",
+    "requestedAt": "2026-09-22T08:41:00Z",
+    "responseAt": "2026-09-22T08:50:47.983644Z",
+    "respondedBy": "h04.ops",
+    "fictional": true
+  },
+  {
+    "referralId": "RF-0056",
+    "caseId": "EL-H0056",
+    "hospitalId": "H04",
+    "requestStatus": "accepted",
+    "requestedAt": "2026-09-26T06:50:00Z",
+    "responseAt": "2026-09-26T06:59:49.310072Z",
+    "respondedBy": "h04.ops",
+    "fictional": true
+  },
+  {
+    "referralId": "RF-0057",
+    "caseId": "EL-H0057",
+    "hospitalId": "H11",
+    "requestStatus": "accepted",
+    "requestedAt": "2026-09-28T15:06:00Z",
+    "responseAt": "2026-09-28T15:15:33.575038Z",
+    "respondedBy": "h11.ops",
+    "fictional": true
+  },
+  {
+    "referralId": "RF-0058",
+    "caseId": "EL-H0058",
+    "hospitalId": "H11",
+    "requestStatus": "rejected",
+    "requestedAt": "2026-10-07T09:38:00Z",
+    "responseAt": "2026-10-07T09:47:09.453280Z",
+    "respondedBy": "h11.ops",
+    "fictional": true
+  },
+  {
+    "referralId": "RF-0059",
+    "caseId": "EL-H0059",
+    "hospitalId": "H11",
+    "requestStatus": "accepted",
+    "requestedAt": "2026-10-03T12:00:00Z",
+    "responseAt": "2026-10-03T12:08:08.117376Z",
+    "respondedBy": "h11.ops",
+    "fictional": true
+  },
+  {
+    "referralId": "RF-0060",
+    "caseId": "EL-H0060",
+    "hospitalId": "H11",
+    "requestStatus": "rejected",
+    "requestedAt": "2026-09-12T21:26:00Z",
+    "responseAt": "2026-09-12T21:43:56.684313Z",
+    "respondedBy": "h11.ops",
+    "fictional": true
+  },
+  {
+    "referralId": "RF-0061",
+    "caseId": "EL-H0061",
+    "hospitalId": "H11",
+    "requestStatus": "accepted",
+    "requestedAt": "2026-09-14T10:07:00Z",
+    "responseAt": "2026-09-14T10:24:30.489582Z",
+    "respondedBy": "h11.ops",
+    "fictional": true
+  },
+  {
+    "referralId": "RF-0062",
+    "caseId": "EL-H0062",
+    "hospitalId": "H11",
+    "requestStatus": "rejected",
+    "requestedAt": "2026-10-06T03:00:00Z",
+    "responseAt": "2026-10-06T03:03:26.656891Z",
+    "respondedBy": "h11.ops",
+    "fictional": true
+  },
+  {
+    "referralId": "RF-0063",
+    "caseId": "EL-H0063",
+    "hospitalId": "H11",
+    "requestStatus": "accepted",
+    "requestedAt": "2026-09-13T04:16:00Z",
+    "responseAt": "2026-09-13T04:28:23.894205Z",
+    "respondedBy": "h11.ops",
+    "fictional": true
+  },
+  {
+    "referralId": "RF-0064",
+    "caseId": "EL-H0064",
+    "hospitalId": "H11",
+    "requestStatus": "accepted",
+    "requestedAt": "2026-10-01T06:41:00Z",
+    "responseAt": "2026-10-01T06:47:11.644013Z",
+    "respondedBy": "h11.ops",
+    "fictional": true
+  },
+  {
+    "referralId": "RF-0065",
+    "caseId": "EL-H0065",
+    "hospitalId": "H11",
+    "requestStatus": "accepted",
+    "requestedAt": "2026-09-29T23:38:00Z",
+    "responseAt": "2026-09-29T23:41:19.521001Z",
+    "respondedBy": "h11.ops",
+    "fictional": true
+  },
+  {
+    "referralId": "RF-0066",
+    "caseId": "EL-H0066",
+    "hospitalId": "H11",
+    "requestStatus": "accepted",
+    "requestedAt": "2026-09-29T23:19:00Z",
+    "responseAt": "2026-09-29T23:29:37.520864Z",
+    "respondedBy": "h11.ops",
+    "fictional": true
+  },
+  {
+    "referralId": "RF-LIVE-1",
+    "caseId": "EL-0002",
+    "hospitalId": "H05",
+    "requestStatus": "sent",
+    "requestedAt": "2026-10-13T08:48:00Z",
+    "responseAt": null,
+    "respondedBy": null,
+    "fictional": true
+  },
+  {
+    "referralId": "RF-LIVE-2",
+    "caseId": "EL-0005",
+    "hospitalId": "H06",
+    "requestStatus": "sent",
+    "requestedAt": "2026-10-13T08:57:00Z",
+    "responseAt": null,
+    "respondedBy": null,
+    "fictional": true
+  }
+]

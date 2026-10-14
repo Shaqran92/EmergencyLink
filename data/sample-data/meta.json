@@ -1,0 +1,7 @@
+{
+  "referenceTime": "2026-10-13T09:00:00Z",
+  "generator": "data/generate_data.py",
+  "seed": 26,
+  "fictional": true,
+  "note": "All records are fictional. Do not use for real decisions."
+}

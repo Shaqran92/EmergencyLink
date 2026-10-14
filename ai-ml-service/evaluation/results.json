@@ -1,0 +1,2587 @@
+{
+  "generatedAt": "2026-10-13T15:14:46.869684+00:00",
+  "engineVersion": "1.0.0",
+  "datasetReferenceTime": "2026-10-13T09:00:00Z",
+  "pytest": {
+    "summary": "381 passed in 2.77s",
+    "exitCode": 0,
+    "seconds": 3.33
+  },
+  "scenarios": [
+    {
+      "id": "S01",
+      "category": "Ranking behaviour",
+      "name": "Travel time decides when everything else is equal",
+      "passed": true,
+      "failures": [],
+      "ranking": [
+        "A (91.4)",
+        "B (82.2)"
+      ],
+      "needsConfirmation": [],
+      "excluded": []
+    },
+    {
+      "id": "S02",
+      "category": "Eligibility correctness",
+      "name": "High score can never compensate for a failed required capability",
+      "passed": true,
+      "failures": [],
+      "ranking": [
+        "B (52.0)"
+      ],
+      "needsConfirmation": [],
+      "excluded": [
+        "A"
+      ]
+    },
+    {
+      "id": "S03",
+      "category": "Eligibility correctness",
+      "name": "Missing required specialty excludes the hospital",
+      "passed": true,
+      "failures": [],
+      "ranking": [
+        "B (82.4)"
+      ],
+      "needsConfirmation": [],
+      "excluded": [
+        "A"
+      ]
+    },
+    {
+      "id": "S04",
+      "category": "Eligibility correctness",
+      "name": "Insufficient count for a multi-unit requirement",
+      "passed": true,
+      "failures": [],
+      "ranking": [
+        "B (79.4)"
+      ],
+      "needsConfirmation": [],
+      "excluded": [
+        "A"
+      ]
+    },
+    {
+      "id": "S05",
+      "category": "Stale data handling",
+      "name": "Stale report stays eligible but is flagged and ranked lower",
+      "passed": true,
+      "failures": [],
+      "ranking": [
+        "B (89.9)",
+        "A (71.9)"
+      ],
+      "needsConfirmation": [],
+      "excluded": []
+    },
+    {
+      "id": "S06",
+      "category": "Stale data handling",
+      "name": "Expired report is never treated as available",
+      "passed": true,
+      "failures": [],
+      "ranking": [
+        "B (71.9)"
+      ],
+      "needsConfirmation": [
+        "A"
+      ],
+      "excluded": []
+    },
+    {
+      "id": "S07",
+      "category": "Unknown data handling",
+      "name": "No report on record means unknown, not available",
+      "passed": true,
+      "failures": [],
+      "ranking": [
+        "B (71.9)"
+      ],
+      "needsConfirmation": [
+        "A"
+      ],
+      "excluded": []
+    },
+    {
+      "id": "S08",
+      "category": "Conflicting data handling",
+      "name": "Conflicting reports from different staff require review",
+      "passed": true,
+      "failures": [],
+      "ranking": [
+        "B (72.7)"
+      ],
+      "needsConfirmation": [
+        "A"
+      ],
+      "excluded": []
+    },
+    {
+      "id": "S09",
+      "category": "Conflicting data handling",
+      "name": "Same reporter correcting a value is an update, not a conflict",
+      "passed": true,
+      "failures": [],
+      "ranking": [
+        "A (87.6)"
+      ],
+      "needsConfirmation": [],
+      "excluded": []
+    },
+    {
+      "id": "S10",
+      "category": "Eligibility correctness",
+      "name": "Closed / diverting hospitals are excluded",
+      "passed": true,
+      "failures": [],
+      "ranking": [
+        "C (65.1)"
+      ],
+      "needsConfirmation": [],
+      "excluded": [
+        "A",
+        "B"
+      ]
+    },
+    {
+      "id": "S11",
+      "category": "Referral workflow",
+      "name": "Rejected referral excludes; pending referral is flagged",
+      "passed": true,
+      "failures": [],
+      "ranking": [
+        "B (96.3)",
+        "C (88.6)"
+      ],
+      "needsConfirmation": [],
+      "excluded": [
+        "A"
+      ]
+    },
+    {
+      "id": "S12",
+      "category": "Ranking behaviour",
+      "name": "Hospital-confirmed data outranks identical unconfirmed data",
+      "passed": true,
+      "failures": [],
+      "ranking": [
+        "A (89.9)",
+        "B (85.4)"
+      ],
+      "needsConfirmation": [],
+      "excluded": []
+    },
+    {
+      "id": "S13",
+      "category": "Unknown data handling",
+      "name": "Unknown travel time never lifts a hospital above complete-data candidates",
+      "passed": true,
+      "failures": [],
+      "ranking": [
+        "B (48.2)",
+        "A (99.0)"
+      ],
+      "needsConfirmation": [],
+      "excluded": []
+    },
+    {
+      "id": "S14",
+      "category": "Safety",
+      "name": "No eligible candidate produces an explicit warning",
+      "passed": true,
+      "failures": [],
+      "ranking": [],
+      "needsConfirmation": [
+        "B"
+      ],
+      "excluded": [
+        "A"
+      ]
+    },
+    {
+      "id": "S15",
+      "category": "Determinism",
+      "name": "Equal scores tie-break on conservative ETA",
+      "passed": true,
+      "failures": [],
+      "ranking": [
+        "B (98.5)",
+        "A (98.5)"
+      ],
+      "needsConfirmation": [],
+      "excluded": []
+    },
+    {
+      "id": "S16",
+      "category": "Determinism",
+      "name": "Fully identical hospitals order by hospitalId regardless of input order",
+      "passed": true,
+      "failures": [],
+      "ranking": [
+        "A (95.4)",
+        "B (95.4)"
+      ],
+      "needsConfirmation": [],
+      "excluded": []
+    },
+    {
+      "id": "S17",
+      "category": "Data quality",
+      "name": "Future-dated report (device clock error) is ignored",
+      "passed": true,
+      "failures": [],
+      "ranking": [],
+      "needsConfirmation": [
+        "A"
+      ],
+      "excluded": []
+    },
+    {
+      "id": "S18",
+      "category": "Stale data handling",
+      "name": "Stale 'unavailable' excludes; expired 'unavailable' needs confirmation",
+      "passed": true,
+      "failures": [],
+      "ranking": [],
+      "needsConfirmation": [
+        "B"
+      ],
+      "excluded": [
+        "A"
+      ]
+    },
+    {
+      "id": "S19",
+      "category": "Ranking behaviour",
+      "name": "More capacity headroom ranks higher",
+      "passed": true,
+      "failures": [],
+      "ranking": [
+        "B (93.9)",
+        "A (81.9)"
+      ],
+      "needsConfirmation": [],
+      "excluded": []
+    },
+    {
+      "id": "S20",
+      "category": "Ranking behaviour",
+      "name": "Preferred (non-mandatory) capability raises capability match",
+      "passed": true,
+      "failures": [],
+      "ranking": [
+        "A (89.9)",
+        "B (79.9)"
+      ],
+      "needsConfirmation": [],
+      "excluded": []
+    },
+    {
+      "id": "S21",
+      "category": "Unknown data handling",
+      "name": "Explicit 'unknown' status needs confirmation",
+      "passed": true,
+      "failures": [],
+      "ranking": [],
+      "needsConfirmation": [
+        "A"
+      ],
+      "excluded": []
+    },
+    {
+      "id": "S22",
+      "category": "Unknown data handling",
+      "name": "'Available' without a count cannot satisfy a count requirement",
+      "passed": true,
+      "failures": [],
+      "ranking": [],
+      "needsConfirmation": [
+        "A"
+      ],
+      "excluded": []
+    },
+    {
+      "id": "S23",
+      "category": "Ranking behaviour",
+      "name": "Live-traffic ETA range scored on its upper bound",
+      "passed": true,
+      "failures": [],
+      "ranking": [
+        "B (93.1)",
+        "A (92.2)"
+      ],
+      "needsConfirmation": [],
+      "excluded": []
+    },
+    {
+      "id": "S24",
+      "category": "Stale data handling",
+      "name": "Freshness windows are resource-specific",
+      "passed": true,
+      "failures": [],
+      "ranking": [
+        "A (63.9)"
+      ],
+      "needsConfirmation": [],
+      "excluded": []
+    }
+  ],
+  "invariants": {
+    "requests": 2000,
+    "hospitalEvaluations": 15951,
+    "violations": {},
+    "totalViolations": 0,
+    "outcomeMix": {
+      "eligible": 2463,
+      "needsConfirmation": 5955,
+      "excluded": 7533
+    },
+    "seconds": 5.3
+  },
+  "latency": [
+    {
+      "hospitals": 10,
+      "avgSnapshots": 154,
+      "runs": 300,
+      "p50ms": 1.85,
+      "p95ms": 2.3,
+      "maxms": 3.48
+    },
+    {
+      "hospitals": 50,
+      "avgSnapshots": 787,
+      "runs": 200,
+      "p50ms": 8.99,
+      "p95ms": 10.45,
+      "maxms": 44.95
+    },
+    {
+      "hospitals": 200,
+      "avgSnapshots": 3150,
+      "runs": 60,
+      "p50ms": 35.91,
+      "p95ms": 72.11,
+      "maxms": 77.03
+    },
+    {
+      "hospitals": 500,
+      "avgSnapshots": 7883,
+      "runs": 25,
+      "p50ms": 97.24,
+      "p95ms": 147.0,
+      "maxms": 166.47
+    }
+  ],
+  "sensitivity": [
+    {
+      "weight": "travelSuitability",
+      "delta": -0.1,
+      "top1Unchanged": 9,
+      "cases": 9,
+      "meanKendallTau": 0.915,
+      "rankedCasesForTau": 6
+    },
+    {
+      "weight": "travelSuitability",
+      "delta": -0.05,
+      "top1Unchanged": 9,
+      "cases": 9,
+      "meanKendallTau": 0.922,
+      "rankedCasesForTau": 6
+    },
+    {
+      "weight": "travelSuitability",
+      "delta": 0.05,
+      "top1Unchanged": 9,
+      "cases": 9,
+      "meanKendallTau": 0.993,
+      "rankedCasesForTau": 6
+    },
+    {
+      "weight": "travelSuitability",
+      "delta": 0.1,
+      "top1Unchanged": 9,
+      "cases": 9,
+      "meanKendallTau": 0.978,
+      "rankedCasesForTau": 6
+    },
+    {
+      "weight": "resourceFreshness",
+      "delta": -0.1,
+      "top1Unchanged": 9,
+      "cases": 9,
+      "meanKendallTau": 0.978,
+      "rankedCasesForTau": 6
+    },
+    {
+      "weight": "resourceFreshness",
+      "delta": -0.05,
+      "top1Unchanged": 9,
+      "cases": 9,
+      "meanKendallTau": 0.993,
+      "rankedCasesForTau": 6
+    },
+    {
+      "weight": "resourceFreshness",
+      "delta": 0.05,
+      "top1Unchanged": 9,
+      "cases": 9,
+      "meanKendallTau": 0.922,
+      "rankedCasesForTau": 6
+    },
+    {
+      "weight": "resourceFreshness",
+      "delta": 0.1,
+      "top1Unchanged": 9,
+      "cases": 9,
+      "meanKendallTau": 0.922,
+      "rankedCasesForTau": 6
+    },
+    {
+      "weight": "capacitySuitability",
+      "delta": -0.1,
+      "top1Unchanged": 9,
+      "cases": 9,
+      "meanKendallTau": 0.993,
+      "rankedCasesForTau": 6
+    },
+    {
+      "weight": "capacitySuitability",
+      "delta": -0.05,
+      "top1Unchanged": 9,
+      "cases": 9,
+      "meanKendallTau": 1.0,
+      "rankedCasesForTau": 6
+    },
+    {
+      "weight": "capacitySuitability",
+      "delta": 0.05,
+      "top1Unchanged": 9,
+      "cases": 9,
+      "meanKendallTau": 0.985,
+      "rankedCasesForTau": 6
+    },
+    {
+      "weight": "capacitySuitability",
+      "delta": 0.1,
+      "top1Unchanged": 9,
+      "cases": 9,
+      "meanKendallTau": 0.97,
+      "rankedCasesForTau": 6
+    },
+    {
+      "weight": "capabilityMatch",
+      "delta": -0.1,
+      "top1Unchanged": 9,
+      "cases": 9,
+      "meanKendallTau": 0.948,
+      "rankedCasesForTau": 6
+    },
+    {
+      "weight": "capabilityMatch",
+      "delta": -0.05,
+      "top1Unchanged": 9,
+      "cases": 9,
+      "meanKendallTau": 0.97,
+      "rankedCasesForTau": 6
+    },
+    {
+      "weight": "capabilityMatch",
+      "delta": 0.05,
+      "top1Unchanged": 9,
+      "cases": 9,
+      "meanKendallTau": 0.922,
+      "rankedCasesForTau": 6
+    },
+    {
+      "weight": "capabilityMatch",
+      "delta": 0.1,
+      "top1Unchanged": 9,
+      "cases": 9,
+      "meanKendallTau": 0.922,
+      "rankedCasesForTau": 6
+    }
+  ],
+  "datasetQuality": {
+    "latestRecords": 72,
+    "fresh": 66,
+    "stale": 5,
+    "expired": 1,
+    "freshSharePct": 91.7,
+    "verifiedSharePct": 91.7,
+    "futureDatedIgnored": 1,
+    "perHospital": {
+      "H01": {
+        "Fresh": 6
+      },
+      "H02": {
+        "Fresh": 7,
+        "Stale": 1
+      },
+      "H03": {
+        "Fresh": 6
+      },
+      "H04": {
+        "Fresh": 3,
+        "Expired": 1
+      },
+      "H05": {
+        "Fresh": 8
+      },
+      "H06": {
+        "Fresh": 7
+      },
+      "H07": {
+        "Fresh": 4
+      },
+      "H08": {
+        "Fresh": 5
+      },
+      "H09": {
+        "Fresh": 4,
+        "Stale": 1
+      },
+      "H10": {
+        "Fresh": 2
+      },
+      "H11": {
+        "Stale": 3,
+        "Fresh": 12
+      },
+      "H12": {
+        "Fresh": 2
+      }
+    }
+  },
+  "caseOutcomes": [
+    {
+      "caseId": "EL-0001",
+      "summary": "Suspected cardiac emergency \u2014 needs cath lab",
+      "hospitalsEvaluated": 12,
+      "eligible": 3,
+      "needsConfirmation": 1,
+      "excluded": 8,
+      "returned": 3,
+      "top": "H01 \u00b7 Crescent Heart Institute",
+      "topScore": "Match score: 80/100",
+      "topFlags": [],
+      "warnings": [
+        "Greenfield District Hospital: ignored 1 future-dated ER bed report(s)"
+      ]
+    },
+    {
+      "caseId": "EL-0002",
+      "summary": "Major trauma \u2014 road traffic collision",
+      "hospitalsEvaluated": 12,
+      "eligible": 4,
+      "needsConfirmation": 0,
+      "excluded": 8,
+      "returned": 4,
+      "top": "H05 \u00b7 Meridian Trauma Centre",
+      "topScore": "Match score: 83/100",
+      "topFlags": [],
+      "warnings": []
+    },
+    {
+      "caseId": "EL-0003",
+      "summary": "Suspected stroke \u2014 needs CT",
+      "hospitalsEvaluated": 12,
+      "eligible": 1,
+      "needsConfirmation": 1,
+      "excluded": 10,
+      "returned": 1,
+      "top": "H11 \u00b7 Harborline Medical College Hospital",
+      "topScore": "Match score: 36/100",
+      "topFlags": [
+        "STALE"
+      ],
+      "warnings": [
+        "Only one eligible candidate \u2014 consider confirming a backup option",
+        "Greenfield District Hospital: ignored 1 future-dated ER bed report(s)",
+        "Top candidate carries data-quality flags \u2014 review before requesting referral"
+      ]
+    },
+    {
+      "caseId": "EL-0004",
+      "summary": "Burn injury",
+      "hospitalsEvaluated": 12,
+      "eligible": 1,
+      "needsConfirmation": 0,
+      "excluded": 11,
+      "returned": 1,
+      "top": "H07 \u00b7 Sunrise Burns & Plastic Surgery Unit",
+      "topScore": "Match score: 77/100",
+      "topFlags": [],
+      "warnings": [
+        "Only one eligible candidate \u2014 consider confirming a backup option"
+      ]
+    },
+    {
+      "caseId": "EL-0005",
+      "summary": "Obstetric emergency",
+      "hospitalsEvaluated": 12,
+      "eligible": 3,
+      "needsConfirmation": 0,
+      "excluded": 9,
+      "returned": 3,
+      "top": "H06 \u00b7 Lotus Women & Children Hospital",
+      "topScore": "Match score: 71/100",
+      "topFlags": [],
+      "warnings": []
+    },
+    {
+      "caseId": "EL-0006",
+      "summary": "Paediatric respiratory distress",
+      "hospitalsEvaluated": 12,
+      "eligible": 3,
+      "needsConfirmation": 0,
+      "excluded": 9,
+      "returned": 3,
+      "top": "H06 \u00b7 Lotus Women & Children Hospital",
+      "topScore": "Match score: 93/100",
+      "topFlags": [],
+      "warnings": [
+        "Greenfield District Hospital: ignored 1 future-dated ER bed report(s)"
+      ]
+    },
+    {
+      "caseId": "EL-0007",
+      "summary": "Multi-patient collision (3 patients)",
+      "hospitalsEvaluated": 12,
+      "eligible": 4,
+      "needsConfirmation": 0,
+      "excluded": 8,
+      "returned": 4,
+      "top": "H05 \u00b7 Meridian Trauma Centre",
+      "topScore": "Match score: 84/100",
+      "topFlags": [],
+      "warnings": [
+        "Greenfield District Hospital: ignored 1 future-dated ER bed report(s)"
+      ]
+    },
+    {
+      "caseId": "EL-0008",
+      "summary": "Cardiac case \u2014 caller location not yet known",
+      "hospitalsEvaluated": 12,
+      "eligible": 4,
+      "needsConfirmation": 0,
+      "excluded": 8,
+      "returned": 4,
+      "top": "H01 \u00b7 Crescent Heart Institute",
+      "topScore": "Match score: 75/100 (incomplete)",
+      "topFlags": [
+        "ETA_UNKNOWN"
+      ],
+      "warnings": [
+        "Greenfield District Hospital: ignored 1 future-dated ER bed report(s)",
+        "Top candidate carries data-quality flags \u2014 review before requesting referral"
+      ]
+    },
+    {
+      "caseId": "EL-0009",
+      "summary": "Minor injury needing ER assessment",
+      "hospitalsEvaluated": 12,
+      "eligible": 11,
+      "needsConfirmation": 0,
+      "excluded": 1,
+      "returned": 11,
+      "top": "H01 \u00b7 Crescent Heart Institute",
+      "topScore": "Match score: 96/100",
+      "topFlags": [],
+      "warnings": [
+        "Greenfield District Hospital: ignored 1 future-dated ER bed report(s)"
+      ]
+    },
+    {
+      "caseId": "EL-0010",
+      "summary": "Needs urgent dialysis",
+      "hospitalsEvaluated": 12,
+      "eligible": 2,
+      "needsConfirmation": 0,
+      "excluded": 10,
+      "returned": 2,
+      "top": "H11 \u00b7 Harborline Medical College Hospital",
+      "topScore": "Match score: 60/100",
+      "topFlags": [
+        "STALE",
+        "STALE"
+      ],
+      "warnings": [
+        "Greenfield District Hospital: ignored 1 future-dated ER bed report(s)",
+        "Top candidate carries data-quality flags \u2014 review before requesting referral"
+      ]
+    }
+  ],
+  "referralStats": [
+    {
+      "hospitalId": "H01",
+      "available": true,
+      "sampleSize": 14,
+      "medianResponseMinutes": 3.7,
+      "period": {
+        "from": "2026-09-15T11:33:00+00:00",
+        "to": "2026-10-08T20:10:00+00:00"
+      },
+      "label": "Median response 4 min (n=14, 2026-09-15\u20132026-10-08) \u00b7 past speed does not predict acceptance"
+    },
+    {
+      "hospitalId": "H02",
+      "available": true,
+      "sampleSize": 11,
+      "medianResponseMinutes": 7.2,
+      "period": {
+        "from": "2026-09-14T03:44:00+00:00",
+        "to": "2026-10-10T06:08:00+00:00"
+      },
+      "label": "Median response 7 min (n=11, 2026-09-14\u20132026-10-10) \u00b7 past speed does not predict acceptance"
+    },
+    {
+      "hospitalId": "H03",
+      "available": true,
+      "sampleSize": 12,
+      "medianResponseMinutes": 4.3,
+      "period": {
+        "from": "2026-09-23T08:41:00+00:00",
+        "to": "2026-10-11T14:31:00+00:00"
+      },
+      "label": "Median response 4 min (n=12, 2026-09-23\u20132026-10-11) \u00b7 past speed does not predict acceptance"
+    },
+    {
+      "hospitalId": "H04",
+      "available": false,
+      "sampleSize": 4,
+      "label": "Insufficient history (n=4, need \u226510)"
+    },
+    {
+      "hospitalId": "H05",
+      "available": true,
+      "sampleSize": 15,
+      "medianResponseMinutes": 3.0,
+      "period": {
+        "from": "2026-09-15T01:46:00+00:00",
+        "to": "2026-10-10T15:00:00+00:00"
+      },
+      "label": "Median response 3 min (n=15, 2026-09-15\u20132026-10-10) \u00b7 past speed does not predict acceptance"
+    },
+    {
+      "hospitalId": "H06",
+      "available": false,
+      "sampleSize": 0,
+      "label": "Insufficient history (n=0, need \u226510)"
+    },
+    {
+      "hospitalId": "H11",
+      "available": true,
+      "sampleSize": 10,
+      "medianResponseMinutes": 9.4,
+      "period": {
+        "from": "2026-09-12T21:26:00+00:00",
+        "to": "2026-10-07T09:38:00+00:00"
+      },
+      "label": "Median response 9 min (n=10, 2026-09-12\u20132026-10-07) \u00b7 past speed does not predict acceptance"
+    }
+  ],
+  "demo": {
+    "step1": {
+      "engineVersion": "1.0.0",
+      "scoreVersion": "match-v1.0",
+      "reliabilityVersion": "reliability-v1.0",
+      "caseId": "EL-DEMO-001",
+      "referenceTime": "2026-10-13T09:00:00+00:00",
+      "generatedAt": "2026-10-13T15:14:44.699925+00:00",
+      "inputHash": "sha256:b4f1e19e56dc86adb9e5e2f288874b69",
+      "weights": {
+        "travelSuitability": 0.4,
+        "resourceFreshness": 0.3,
+        "capacitySuitability": 0.2,
+        "capabilityMatch": 0.1
+      },
+      "summary": {
+        "hospitalsEvaluated": 4,
+        "eligible": 2,
+        "needsConfirmation": 1,
+        "excluded": 1,
+        "returned": 2
+      },
+      "candidates": [
+        {
+          "rank": 1,
+          "hospitalId": "H01",
+          "name": "Crescent Heart Institute",
+          "eligibility": "ELIGIBLE",
+          "matchScore": 77.5,
+          "matchScoreLabel": "Match score: 78/100",
+          "scoreComplete": true,
+          "factors": [
+            {
+              "factor": "travelSuitability",
+              "label": "Travel suitability",
+              "value": 82.7,
+              "weight": 0.4,
+              "effectiveWeight": 0.4,
+              "contribution": 33.08,
+              "effect": "raised",
+              "explanation": "Estimated travel: 14\u201317 min \u00b7 live traffic \u2014 scored on upper bound 17 min"
+            },
+            {
+              "factor": "resourceFreshness",
+              "label": "Resource freshness",
+              "value": 88.0,
+              "weight": 0.3,
+              "effectiveWeight": 0.3,
+              "contribution": 26.4,
+              "effect": "raised",
+              "explanation": "Weakest required resource: ICU bed updated 12 min ago (confirmed)"
+            },
+            {
+              "factor": "capacitySuitability",
+              "label": "Capacity suitability",
+              "value": 40.0,
+              "weight": 0.2,
+              "effectiveWeight": 0.2,
+              "contribution": 8.0,
+              "effect": "lowered",
+              "explanation": "Tightest resource: cath lab \u2014 1 reported for 1 required (no spare capacity)"
+            },
+            {
+              "factor": "capabilityMatch",
+              "label": "Capability match",
+              "value": 100.0,
+              "weight": 0.1,
+              "effectiveWeight": 0.1,
+              "contribution": 10.0,
+              "effect": "raised",
+              "explanation": "1 of 1 preferred capabilities reported"
+            }
+          ],
+          "hardConstraints": [
+            {
+              "requirement": "Hospital accepting emergencies",
+              "result": "Pass",
+              "detail": "Status: operational"
+            },
+            {
+              "requirement": "Specialty: cardiology",
+              "result": "Pass",
+              "detail": "Reported in directory"
+            },
+            {
+              "requirement": "ER bed \u2265 1",
+              "result": "Pass",
+              "detail": "5 reported \u00b7 updated 8 min ago"
+            },
+            {
+              "requirement": "cath lab \u2265 1",
+              "result": "Pass",
+              "detail": "1 reported \u00b7 updated 20 min ago"
+            },
+            {
+              "requirement": "cardiologist \u2265 1",
+              "result": "Pass",
+              "detail": "2 reported \u00b7 updated 15 min ago"
+            },
+            {
+              "requirement": "ICU bed \u2265 1",
+              "result": "Pass",
+              "detail": "3 reported \u00b7 updated 12 min ago"
+            }
+          ],
+          "resourceReliability": {
+            "score": 94.7,
+            "level": "High",
+            "label": "Resource data: High reliability",
+            "basis": "Weakest required resource (heuristic, not a probability)",
+            "perResource": [
+              {
+                "resourceType": "er_bed",
+                "score": 96.4,
+                "level": "High",
+                "components": {
+                  "freshness": 92.0,
+                  "confirmation": 100.0,
+                  "completeness": 100.0,
+                  "consistency": null
+                },
+                "weightsApplied": {
+                  "freshness": 0.444,
+                  "confirmation": 0.333,
+                  "completeness": 0.222
+                },
+                "notes": [
+                  "Consistency not assessed (no comparable recent reports) \u2014 weights re-normalised"
+                ]
+              },
+              {
+                "resourceType": "cath_lab",
+                "score": 95.6,
+                "level": "High",
+                "components": {
+                  "freshness": 90.0,
+                  "confirmation": 100.0,
+                  "completeness": 100.0,
+                  "consistency": null
+                },
+                "weightsApplied": {
+                  "freshness": 0.444,
+                  "confirmation": 0.333,
+                  "completeness": 0.222
+                },
+                "notes": [
+                  "Consistency not assessed (no comparable recent reports) \u2014 weights re-normalised"
+                ]
+              },
+              {
+                "resourceType": "cardiologist",
+                "score": 96.7,
+                "level": "High",
+                "components": {
+                  "freshness": 92.5,
+                  "confirmation": 100.0,
+                  "completeness": 100.0,
+                  "consistency": null
+                },
+                "weightsApplied": {
+                  "freshness": 0.444,
+                  "confirmation": 0.333,
+                  "completeness": 0.222
+                },
+                "notes": [
+                  "Consistency not assessed (no comparable recent reports) \u2014 weights re-normalised"
+                ]
+              },
+              {
+                "resourceType": "icu_bed",
+                "score": 94.7,
+                "level": "High",
+                "components": {
+                  "freshness": 88.0,
+                  "confirmation": 100.0,
+                  "completeness": 100.0,
+                  "consistency": null
+                },
+                "weightsApplied": {
+                  "freshness": 0.444,
+                  "confirmation": 0.333,
+                  "completeness": 0.222
+                },
+                "notes": [
+                  "Consistency not assessed (no comparable recent reports) \u2014 weights re-normalised"
+                ]
+              }
+            ]
+          },
+          "eta": {
+            "known": true,
+            "minMinutes": 14.0,
+            "maxMinutes": 17.0,
+            "source": "live_traffic",
+            "reliability": "High",
+            "label": "Estimated travel: 14\u201317 min \u00b7 live traffic",
+            "notes": [],
+            "estimatedAt": "2026-10-13T09:00:00+00:00",
+            "distanceKm": null
+          },
+          "etaReliabilityLabel": "ETA confidence: High",
+          "resources": {
+            "er_bed": {
+              "state": "Confirmed",
+              "freshness": "Fresh",
+              "statusText": "Reported available (5)",
+              "label": "Reported available (5) \u00b7 Updated 8 min ago",
+              "reportedAt": "2026-10-13T08:52:00+00:00",
+              "verifiedAt": "2026-10-13T08:52:00+00:00",
+              "reportedBy": "h01.ops",
+              "version": 3,
+              "ageMinutes": 8.0,
+              "freshWindowMinutes": 30,
+              "staleWindowMinutes": 120
+            },
+            "cath_lab": {
+              "state": "Confirmed",
+              "freshness": "Fresh",
+              "statusText": "Reported available (1)",
+              "label": "Reported available (1) \u00b7 Updated 20 min ago",
+              "reportedAt": "2026-10-13T08:40:00+00:00",
+              "verifiedAt": "2026-10-13T08:40:00+00:00",
+              "reportedBy": "h01.ops",
+              "version": 3,
+              "ageMinutes": 20.0,
+              "freshWindowMinutes": 60,
+              "staleWindowMinutes": 240
+            },
+            "cardiologist": {
+              "state": "Confirmed",
+              "freshness": "Fresh",
+              "statusText": "Reported available (2)",
+              "label": "Reported available (2) \u00b7 Updated 15 min ago",
+              "reportedAt": "2026-10-13T08:45:00+00:00",
+              "verifiedAt": "2026-10-13T08:45:00+00:00",
+              "reportedBy": "h01.ops",
+              "version": 3,
+              "ageMinutes": 15.0,
+              "freshWindowMinutes": 60,
+              "staleWindowMinutes": 240
+            },
+            "icu_bed": {
+              "state": "Confirmed",
+              "freshness": "Fresh",
+              "statusText": "Reported available (3)",
+              "label": "Reported available (3) \u00b7 Updated 12 min ago",
+              "reportedAt": "2026-10-13T08:48:00+00:00",
+              "verifiedAt": "2026-10-13T08:48:00+00:00",
+              "reportedBy": "h01.ops",
+              "version": 3,
+              "ageMinutes": 12.0,
+              "freshWindowMinutes": 30,
+              "staleWindowMinutes": 120
+            }
+          },
+          "flags": [],
+          "oldestRequiredReportAt": "2026-10-13T08:40:00+00:00",
+          "explanationSummary": "Rank #1 \u00b7 Match score 78/100. Raised by travel suitability, resource freshness, capability match. Lowered by capacity suitability.",
+          "referralStatus": "Not requested \u2014 hospital acceptance required"
+        },
+        {
+          "rank": 2,
+          "hospitalId": "H02",
+          "name": "Seaview Medical Centre",
+          "eligibility": "ELIGIBLE",
+          "matchScore": 49.3,
+          "matchScoreLabel": "Match score: 49/100",
+          "scoreComplete": true,
+          "factors": [
+            {
+              "factor": "travelSuitability",
+              "label": "Travel suitability",
+              "value": 94.6,
+              "weight": 0.4,
+              "effectiveWeight": 0.4,
+              "contribution": 37.85,
+              "effect": "raised",
+              "explanation": "Estimated travel: 8\u201311 min \u00b7 map routing \u00b7 live traffic unavailable \u2014 scored on upper bound 11 min"
+            },
+            {
+              "factor": "resourceFreshness",
+              "label": "Resource freshness",
+              "value": 11.7,
+              "weight": 0.3,
+              "effectiveWeight": 0.3,
+              "contribution": 3.5,
+              "effect": "lowered",
+              "explanation": "Weakest required resource: ICU bed updated 1.6 h ago (stale)"
+            },
+            {
+              "factor": "capacitySuitability",
+              "label": "Capacity suitability",
+              "value": 40.0,
+              "weight": 0.2,
+              "effectiveWeight": 0.2,
+              "contribution": 8.0,
+              "effect": "lowered",
+              "explanation": "Tightest resource: cardiologist \u2014 1 reported for 1 required (no spare capacity)"
+            },
+            {
+              "factor": "capabilityMatch",
+              "label": "Capability match",
+              "value": 0.0,
+              "weight": 0.1,
+              "effectiveWeight": 0.1,
+              "contribution": 0.0,
+              "effect": "lowered",
+              "explanation": "0 of 1 preferred capabilities reported; unknown (not counted): ventilator"
+            }
+          ],
+          "hardConstraints": [
+            {
+              "requirement": "Hospital accepting emergencies",
+              "result": "Pass",
+              "detail": "Status: operational"
+            },
+            {
+              "requirement": "Specialty: cardiology",
+              "result": "Pass",
+              "detail": "Reported in directory"
+            },
+            {
+              "requirement": "ER bed \u2265 1",
+              "result": "Pass",
+              "detail": "6 reported \u00b7 updated 5 min ago"
+            },
+            {
+              "requirement": "cath lab \u2265 1",
+              "result": "Pass",
+              "detail": "1 reported \u00b7 updated 25 min ago"
+            },
+            {
+              "requirement": "cardiologist \u2265 1",
+              "result": "Pass",
+              "detail": "1 reported \u00b7 updated 30 min ago"
+            },
+            {
+              "requirement": "ICU bed \u2265 1",
+              "result": "Pass",
+              "detail": "2 reported \u00b7 updated 1.6 h ago"
+            }
+          ],
+          "resourceReliability": {
+            "score": 34.1,
+            "level": "Low",
+            "label": "Resource data: Low reliability",
+            "basis": "Weakest required resource (heuristic, not a probability)",
+            "perResource": [
+              {
+                "resourceType": "er_bed",
+                "score": 97.8,
+                "level": "High",
+                "components": {
+                  "freshness": 95.0,
+                  "confirmation": 100.0,
+                  "completeness": 100.0,
+                  "consistency": null
+                },
+                "weightsApplied": {
+                  "freshness": 0.444,
+                  "confirmation": 0.333,
+                  "completeness": 0.222
+                },
+                "notes": [
+                  "Consistency not assessed (no comparable recent reports) \u2014 weights re-normalised"
+                ]
+              },
+              {
+                "resourceType": "cath_lab",
+                "score": 94.4,
+                "level": "High",
+                "components": {
+                  "freshness": 87.5,
+                  "confirmation": 100.0,
+                  "completeness": 100.0,
+                  "consistency": null
+                },
+                "weightsApplied": {
+                  "freshness": 0.444,
+                  "confirmation": 0.333,
+                  "completeness": 0.222
+                },
+                "notes": [
+                  "Consistency not assessed (no comparable recent reports) \u2014 weights re-normalised"
+                ]
+              },
+              {
+                "resourceType": "cardiologist",
+                "score": 93.3,
+                "level": "High",
+                "components": {
+                  "freshness": 85.0,
+                  "confirmation": 100.0,
+                  "completeness": 100.0,
+                  "consistency": null
+                },
+                "weightsApplied": {
+                  "freshness": 0.444,
+                  "confirmation": 0.333,
+                  "completeness": 0.222
+                },
+                "notes": [
+                  "Consistency not assessed (no comparable recent reports) \u2014 weights re-normalised"
+                ]
+              },
+              {
+                "resourceType": "icu_bed",
+                "score": 34.1,
+                "level": "Low",
+                "components": {
+                  "freshness": 26.7,
+                  "confirmation": 0.0,
+                  "completeness": 100.0,
+                  "consistency": null
+                },
+                "weightsApplied": {
+                  "freshness": 0.444,
+                  "confirmation": 0.333,
+                  "completeness": 0.222
+                },
+                "notes": [
+                  "Consistency not assessed (no comparable recent reports) \u2014 weights re-normalised",
+                  "Not explicitly confirmed by an authorised hospital user"
+                ]
+              }
+            ]
+          },
+          "eta": {
+            "known": true,
+            "minMinutes": 8.0,
+            "maxMinutes": 10.8,
+            "source": "map_routing",
+            "reliability": "Medium",
+            "label": "Estimated travel: 8\u201311 min \u00b7 map routing \u00b7 live traffic unavailable",
+            "notes": [],
+            "estimatedAt": "2026-10-13T09:00:00+00:00",
+            "distanceKm": null
+          },
+          "etaReliabilityLabel": "ETA confidence: Medium",
+          "resources": {
+            "er_bed": {
+              "state": "Confirmed",
+              "freshness": "Fresh",
+              "statusText": "Reported available (6)",
+              "label": "Reported available (6) \u00b7 Updated 5 min ago",
+              "reportedAt": "2026-10-13T08:55:00+00:00",
+              "verifiedAt": "2026-10-13T08:55:00+00:00",
+              "reportedBy": "h02.ops",
+              "version": 3,
+              "ageMinutes": 5.0,
+              "freshWindowMinutes": 30,
+              "staleWindowMinutes": 120
+            },
+            "cath_lab": {
+              "state": "Confirmed",
+              "freshness": "Fresh",
+              "statusText": "Reported available (1)",
+              "label": "Reported available (1) \u00b7 Updated 25 min ago",
+              "reportedAt": "2026-10-13T08:35:00+00:00",
+              "verifiedAt": "2026-10-13T08:35:00+00:00",
+              "reportedBy": "h02.ops",
+              "version": 3,
+              "ageMinutes": 25.0,
+              "freshWindowMinutes": 60,
+              "staleWindowMinutes": 240
+            },
+            "cardiologist": {
+              "state": "Confirmed",
+              "freshness": "Fresh",
+              "statusText": "Reported available (1)",
+              "label": "Reported available (1) \u00b7 Updated 30 min ago",
+              "reportedAt": "2026-10-13T08:30:00+00:00",
+              "verifiedAt": "2026-10-13T08:30:00+00:00",
+              "reportedBy": "h02.ops",
+              "version": 3,
+              "ageMinutes": 30.0,
+              "freshWindowMinutes": 60,
+              "staleWindowMinutes": 240
+            },
+            "icu_bed": {
+              "state": "Stale",
+              "freshness": "Stale",
+              "statusText": "Reported available (2)",
+              "label": "Reported available (2) \u00b7 Updated 1.6 h ago \u00b7 Stale",
+              "reportedAt": "2026-10-13T07:25:00+00:00",
+              "verifiedAt": null,
+              "reportedBy": "h02.ops",
+              "version": 3,
+              "ageMinutes": 95.0,
+              "freshWindowMinutes": 30,
+              "staleWindowMinutes": 120
+            }
+          },
+          "flags": [
+            {
+              "code": "STALE",
+              "label": "ICU bed: stale report (1.6 h ago) \u2014 reconfirm"
+            },
+            {
+              "code": "UNCONFIRMED",
+              "label": "ICU bed: not confirmed by hospital user"
+            }
+          ],
+          "oldestRequiredReportAt": "2026-10-13T07:25:00+00:00",
+          "explanationSummary": "Rank #2 \u00b7 Match score 49/100. Raised by travel suitability. Lowered by resource freshness, capacity suitability, capability match. Main gap vs #1: resource freshness (-22.9 pts).",
+          "referralStatus": "Not requested \u2014 hospital acceptance required"
+        }
+      ],
+      "needsConfirmation": [
+        {
+          "hospitalId": "H04",
+          "name": "Palm Grove Hospital",
+          "eligibility": "NEEDS_CONFIRMATION",
+          "matchScore": null,
+          "matchScoreLabel": "Insufficient data \u2014 not scored",
+          "reasons": [
+            "Needs reconfirmation \u2014 ICU bed report expired (5 h ago)"
+          ],
+          "hardConstraints": [
+            {
+              "requirement": "Hospital accepting emergencies",
+              "result": "Pass",
+              "detail": "Status: operational"
+            },
+            {
+              "requirement": "Specialty: cardiology",
+              "result": "Pass",
+              "detail": "Reported in directory"
+            },
+            {
+              "requirement": "ER bed \u2265 1",
+              "result": "Pass",
+              "detail": "4 reported \u00b7 updated 12 min ago"
+            },
+            {
+              "requirement": "cath lab \u2265 1",
+              "result": "Pass",
+              "detail": "1 reported \u00b7 updated 40 min ago"
+            },
+            {
+              "requirement": "cardiologist \u2265 1",
+              "result": "Pass",
+              "detail": "1 reported \u00b7 updated 35 min ago"
+            },
+            {
+              "requirement": "ICU bed \u2265 1",
+              "result": "Unknown",
+              "detail": "Last report 5 h ago \u2014 expired"
+            }
+          ],
+          "eta": {
+            "known": true,
+            "minMinutes": 16.0,
+            "maxMinutes": 21.6,
+            "source": "map_routing",
+            "reliability": "Medium",
+            "label": "Estimated travel: 16\u201322 min \u00b7 map routing \u00b7 live traffic unavailable",
+            "notes": [],
+            "estimatedAt": "2026-10-13T09:00:00+00:00",
+            "distanceKm": null
+          },
+          "resources": {
+            "er_bed": {
+              "state": "Confirmed",
+              "freshness": "Fresh",
+              "statusText": "Reported available (4)",
+              "label": "Reported available (4) \u00b7 Updated 12 min ago",
+              "reportedAt": "2026-10-13T08:48:00+00:00",
+              "verifiedAt": "2026-10-13T08:48:00+00:00",
+              "reportedBy": "h04.ops",
+              "version": 3,
+              "ageMinutes": 12.0,
+              "freshWindowMinutes": 30,
+              "staleWindowMinutes": 120
+            },
+            "cath_lab": {
+              "state": "Confirmed",
+              "freshness": "Fresh",
+              "statusText": "Reported available (1)",
+              "label": "Reported available (1) \u00b7 Updated 40 min ago",
+              "reportedAt": "2026-10-13T08:20:00+00:00",
+              "verifiedAt": "2026-10-13T08:20:00+00:00",
+              "reportedBy": "h04.ops",
+              "version": 3,
+              "ageMinutes": 40.0,
+              "freshWindowMinutes": 60,
+              "staleWindowMinutes": 240
+            },
+            "cardiologist": {
+              "state": "Confirmed",
+              "freshness": "Fresh",
+              "statusText": "Reported available (1)",
+              "label": "Reported available (1) \u00b7 Updated 35 min ago",
+              "reportedAt": "2026-10-13T08:25:00+00:00",
+              "verifiedAt": "2026-10-13T08:25:00+00:00",
+              "reportedBy": "h04.ops",
+              "version": 3,
+              "ageMinutes": 35.0,
+              "freshWindowMinutes": 60,
+              "staleWindowMinutes": 240
+            },
+            "icu_bed": {
+              "state": "Needs reconfirmation",
+              "freshness": "Expired",
+              "statusText": "Unknown (report expired)",
+              "label": "Unknown (report expired) \u00b7 Updated 5 h ago \u00b7 Needs reconfirmation",
+              "reportedAt": "2026-10-13T04:00:00+00:00",
+              "verifiedAt": "2026-10-13T04:00:00+00:00",
+              "reportedBy": "h04.ops",
+              "version": 3,
+              "ageMinutes": 300.0,
+              "freshWindowMinutes": 30,
+              "staleWindowMinutes": 120
+            }
+          },
+          "flags": []
+        }
+      ],
+      "excluded": [
+        {
+          "hospitalId": "H03",
+          "name": "Northbridge General Hospital",
+          "eligibility": "EXCLUDED",
+          "matchScore": null,
+          "reasons": [
+            "Required service not reported: cardiology"
+          ],
+          "hardConstraints": [
+            {
+              "requirement": "Hospital accepting emergencies",
+              "result": "Pass",
+              "detail": "Status: operational"
+            },
+            {
+              "requirement": "Specialty: cardiology",
+              "result": "Fail",
+              "detail": "Required service not reported: cardiology"
+            },
+            {
+              "requirement": "ER bed \u2265 1",
+              "result": "Pass",
+              "detail": "8 reported \u00b7 updated 10 min ago"
+            },
+            {
+              "requirement": "cath lab \u2265 1",
+              "result": "Unknown",
+              "detail": "No report on record"
+            },
+            {
+              "requirement": "cardiologist \u2265 1",
+              "result": "Unknown",
+              "detail": "No report on record"
+            },
+            {
+              "requirement": "ICU bed \u2265 1",
+              "result": "Pass",
+              "detail": "4 reported \u00b7 updated 18 min ago"
+            }
+          ]
+        }
+      ],
+      "warnings": [],
+      "requiresHumanReview": true,
+      "disclaimer": "Match score ranks operational suitability using reported, possibly incomplete data. It is not a probability of successful treatment, does not guarantee availability, and requires human review and explicit receiving-hospital acceptance. Prototype values are illustrative."
+    },
+    "step2": {
+      "engineVersion": "1.0.0",
+      "scoreVersion": "match-v1.0",
+      "reliabilityVersion": "reliability-v1.0",
+      "caseId": "EL-DEMO-001",
+      "referenceTime": "2026-10-13T09:05:00+00:00",
+      "generatedAt": "2026-10-13T15:14:44.700927+00:00",
+      "inputHash": "sha256:1ce0cddc4ec02773de5d8b80db03b0ca",
+      "weights": {
+        "travelSuitability": 0.4,
+        "resourceFreshness": 0.3,
+        "capacitySuitability": 0.2,
+        "capabilityMatch": 0.1
+      },
+      "summary": {
+        "hospitalsEvaluated": 4,
+        "eligible": 1,
+        "needsConfirmation": 1,
+        "excluded": 2,
+        "returned": 1
+      },
+      "candidates": [
+        {
+          "rank": 1,
+          "hospitalId": "H02",
+          "name": "Seaview Medical Centre",
+          "eligibility": "ELIGIBLE",
+          "matchScore": 48.3,
+          "matchScoreLabel": "Match score: 48/100",
+          "scoreComplete": true,
+          "factors": [
+            {
+              "factor": "travelSuitability",
+              "label": "Travel suitability",
+              "value": 94.6,
+              "weight": 0.4,
+              "effectiveWeight": 0.4,
+              "contribution": 37.85,
+              "effect": "raised",
+              "explanation": "Estimated travel: 8\u201311 min \u00b7 map routing \u00b7 live traffic unavailable \u2014 scored on upper bound 11 min"
+            },
+            {
+              "factor": "resourceFreshness",
+              "label": "Resource freshness",
+              "value": 8.3,
+              "weight": 0.3,
+              "effectiveWeight": 0.3,
+              "contribution": 2.5,
+              "effect": "lowered",
+              "explanation": "Weakest required resource: ICU bed updated 1.7 h ago (stale)"
+            },
+            {
+              "factor": "capacitySuitability",
+              "label": "Capacity suitability",
+              "value": 40.0,
+              "weight": 0.2,
+              "effectiveWeight": 0.2,
+              "contribution": 8.0,
+              "effect": "lowered",
+              "explanation": "Tightest resource: cardiologist \u2014 1 reported for 1 required (no spare capacity)"
+            },
+            {
+              "factor": "capabilityMatch",
+              "label": "Capability match",
+              "value": 0.0,
+              "weight": 0.1,
+              "effectiveWeight": 0.1,
+              "contribution": 0.0,
+              "effect": "lowered",
+              "explanation": "0 of 1 preferred capabilities reported; unknown (not counted): ventilator"
+            }
+          ],
+          "hardConstraints": [
+            {
+              "requirement": "Hospital accepting emergencies",
+              "result": "Pass",
+              "detail": "Status: operational"
+            },
+            {
+              "requirement": "Specialty: cardiology",
+              "result": "Pass",
+              "detail": "Reported in directory"
+            },
+            {
+              "requirement": "ER bed \u2265 1",
+              "result": "Pass",
+              "detail": "6 reported \u00b7 updated 10 min ago"
+            },
+            {
+              "requirement": "cath lab \u2265 1",
+              "result": "Pass",
+              "detail": "1 reported \u00b7 updated 30 min ago"
+            },
+            {
+              "requirement": "cardiologist \u2265 1",
+              "result": "Pass",
+              "detail": "1 reported \u00b7 updated 35 min ago"
+            },
+            {
+              "requirement": "ICU bed \u2265 1",
+              "result": "Pass",
+              "detail": "2 reported \u00b7 updated 1.7 h ago"
+            }
+          ],
+          "resourceReliability": {
+            "score": 32.6,
+            "level": "Low",
+            "label": "Resource data: Low reliability",
+            "basis": "Weakest required resource (heuristic, not a probability)",
+            "perResource": [
+              {
+                "resourceType": "er_bed",
+                "score": 95.6,
+                "level": "High",
+                "components": {
+                  "freshness": 90.0,
+                  "confirmation": 100.0,
+                  "completeness": 100.0,
+                  "consistency": null
+                },
+                "weightsApplied": {
+                  "freshness": 0.444,
+                  "confirmation": 0.333,
+                  "completeness": 0.222
+                },
+                "notes": [
+                  "Consistency not assessed (no comparable recent reports) \u2014 weights re-normalised"
+                ]
+              },
+              {
+                "resourceType": "cath_lab",
+                "score": 93.3,
+                "level": "High",
+                "components": {
+                  "freshness": 85.0,
+                  "confirmation": 100.0,
+                  "completeness": 100.0,
+                  "consistency": null
+                },
+                "weightsApplied": {
+                  "freshness": 0.444,
+                  "confirmation": 0.333,
+                  "completeness": 0.222
+                },
+                "notes": [
+                  "Consistency not assessed (no comparable recent reports) \u2014 weights re-normalised"
+                ]
+              },
+              {
+                "resourceType": "cardiologist",
+                "score": 92.2,
+                "level": "High",
+                "components": {
+                  "freshness": 82.5,
+                  "confirmation": 100.0,
+                  "completeness": 100.0,
+                  "consistency": null
+                },
+                "weightsApplied": {
+                  "freshness": 0.444,
+                  "confirmation": 0.333,
+                  "completeness": 0.222
+                },
+                "notes": [
+                  "Consistency not assessed (no comparable recent reports) \u2014 weights re-normalised"
+                ]
+              },
+              {
+                "resourceType": "icu_bed",
+                "score": 32.6,
+                "level": "Low",
+                "components": {
+                  "freshness": 23.3,
+                  "confirmation": 0.0,
+                  "completeness": 100.0,
+                  "consistency": null
+                },
+                "weightsApplied": {
+                  "freshness": 0.444,
+                  "confirmation": 0.333,
+                  "completeness": 0.222
+                },
+                "notes": [
+                  "Consistency not assessed (no comparable recent reports) \u2014 weights re-normalised",
+                  "Not explicitly confirmed by an authorised hospital user"
+                ]
+              }
+            ]
+          },
+          "eta": {
+            "known": true,
+            "minMinutes": 8.0,
+            "maxMinutes": 10.8,
+            "source": "map_routing",
+            "reliability": "Medium",
+            "label": "Estimated travel: 8\u201311 min \u00b7 map routing \u00b7 live traffic unavailable",
+            "notes": [],
+            "estimatedAt": "2026-10-13T09:00:00+00:00",
+            "distanceKm": null
+          },
+          "etaReliabilityLabel": "ETA confidence: Medium",
+          "resources": {
+            "er_bed": {
+              "state": "Confirmed",
+              "freshness": "Fresh",
+              "statusText": "Reported available (6)",
+              "label": "Reported available (6) \u00b7 Updated 10 min ago",
+              "reportedAt": "2026-10-13T08:55:00+00:00",
+              "verifiedAt": "2026-10-13T08:55:00+00:00",
+              "reportedBy": "h02.ops",
+              "version": 3,
+              "ageMinutes": 10.0,
+              "freshWindowMinutes": 30,
+              "staleWindowMinutes": 120
+            },
+            "cath_lab": {
+              "state": "Confirmed",
+              "freshness": "Fresh",
+              "statusText": "Reported available (1)",
+              "label": "Reported available (1) \u00b7 Updated 30 min ago",
+              "reportedAt": "2026-10-13T08:35:00+00:00",
+              "verifiedAt": "2026-10-13T08:35:00+00:00",
+              "reportedBy": "h02.ops",
+              "version": 3,
+              "ageMinutes": 30.0,
+              "freshWindowMinutes": 60,
+              "staleWindowMinutes": 240
+            },
+            "cardiologist": {
+              "state": "Confirmed",
+              "freshness": "Fresh",
+              "statusText": "Reported available (1)",
+              "label": "Reported available (1) \u00b7 Updated 35 min ago",
+              "reportedAt": "2026-10-13T08:30:00+00:00",
+              "verifiedAt": "2026-10-13T08:30:00+00:00",
+              "reportedBy": "h02.ops",
+              "version": 3,
+              "ageMinutes": 35.0,
+              "freshWindowMinutes": 60,
+              "staleWindowMinutes": 240
+            },
+            "icu_bed": {
+              "state": "Stale",
+              "freshness": "Stale",
+              "statusText": "Reported available (2)",
+              "label": "Reported available (2) \u00b7 Updated 1.7 h ago \u00b7 Stale",
+              "reportedAt": "2026-10-13T07:25:00+00:00",
+              "verifiedAt": null,
+              "reportedBy": "h02.ops",
+              "version": 3,
+              "ageMinutes": 100.0,
+              "freshWindowMinutes": 30,
+              "staleWindowMinutes": 120
+            }
+          },
+          "flags": [
+            {
+              "code": "STALE",
+              "label": "ICU bed: stale report (1.7 h ago) \u2014 reconfirm"
+            },
+            {
+              "code": "UNCONFIRMED",
+              "label": "ICU bed: not confirmed by hospital user"
+            }
+          ],
+          "oldestRequiredReportAt": "2026-10-13T07:25:00+00:00",
+          "explanationSummary": "Rank #1 \u00b7 Match score 48/100. Raised by travel suitability. Lowered by resource freshness, capacity suitability, capability match.",
+          "referralStatus": "Not requested \u2014 hospital acceptance required"
+        }
+      ],
+      "needsConfirmation": [
+        {
+          "hospitalId": "H04",
+          "name": "Palm Grove Hospital",
+          "eligibility": "NEEDS_CONFIRMATION",
+          "matchScore": null,
+          "matchScoreLabel": "Insufficient data \u2014 not scored",
+          "reasons": [
+            "Needs reconfirmation \u2014 ICU bed report expired (5.1 h ago)"
+          ],
+          "hardConstraints": [
+            {
+              "requirement": "Hospital accepting emergencies",
+              "result": "Pass",
+              "detail": "Status: operational"
+            },
+            {
+              "requirement": "Specialty: cardiology",
+              "result": "Pass",
+              "detail": "Reported in directory"
+            },
+            {
+              "requirement": "ER bed \u2265 1",
+              "result": "Pass",
+              "detail": "4 reported \u00b7 updated 17 min ago"
+            },
+            {
+              "requirement": "cath lab \u2265 1",
+              "result": "Pass",
+              "detail": "1 reported \u00b7 updated 45 min ago"
+            },
+            {
+              "requirement": "cardiologist \u2265 1",
+              "result": "Pass",
+              "detail": "1 reported \u00b7 updated 40 min ago"
+            },
+            {
+              "requirement": "ICU bed \u2265 1",
+              "result": "Unknown",
+              "detail": "Last report 5.1 h ago \u2014 expired"
+            }
+          ],
+          "eta": {
+            "known": true,
+            "minMinutes": 16.0,
+            "maxMinutes": 21.6,
+            "source": "map_routing",
+            "reliability": "Medium",
+            "label": "Estimated travel: 16\u201322 min \u00b7 map routing \u00b7 live traffic unavailable",
+            "notes": [],
+            "estimatedAt": "2026-10-13T09:00:00+00:00",
+            "distanceKm": null
+          },
+          "resources": {
+            "er_bed": {
+              "state": "Confirmed",
+              "freshness": "Fresh",
+              "statusText": "Reported available (4)",
+              "label": "Reported available (4) \u00b7 Updated 17 min ago",
+              "reportedAt": "2026-10-13T08:48:00+00:00",
+              "verifiedAt": "2026-10-13T08:48:00+00:00",
+              "reportedBy": "h04.ops",
+              "version": 3,
+              "ageMinutes": 17.0,
+              "freshWindowMinutes": 30,
+              "staleWindowMinutes": 120
+            },
+            "cath_lab": {
+              "state": "Confirmed",
+              "freshness": "Fresh",
+              "statusText": "Reported available (1)",
+              "label": "Reported available (1) \u00b7 Updated 45 min ago",
+              "reportedAt": "2026-10-13T08:20:00+00:00",
+              "verifiedAt": "2026-10-13T08:20:00+00:00",
+              "reportedBy": "h04.ops",
+              "version": 3,
+              "ageMinutes": 45.0,
+              "freshWindowMinutes": 60,
+              "staleWindowMinutes": 240
+            },
+            "cardiologist": {
+              "state": "Confirmed",
+              "freshness": "Fresh",
+              "statusText": "Reported available (1)",
+              "label": "Reported available (1) \u00b7 Updated 40 min ago",
+              "reportedAt": "2026-10-13T08:25:00+00:00",
+              "verifiedAt": "2026-10-13T08:25:00+00:00",
+              "reportedBy": "h04.ops",
+              "version": 3,
+              "ageMinutes": 40.0,
+              "freshWindowMinutes": 60,
+              "staleWindowMinutes": 240
+            },
+            "icu_bed": {
+              "state": "Needs reconfirmation",
+              "freshness": "Expired",
+              "statusText": "Unknown (report expired)",
+              "label": "Unknown (report expired) \u00b7 Updated 5.1 h ago \u00b7 Needs reconfirmation",
+              "reportedAt": "2026-10-13T04:00:00+00:00",
+              "verifiedAt": "2026-10-13T04:00:00+00:00",
+              "reportedBy": "h04.ops",
+              "version": 3,
+              "ageMinutes": 305.0,
+              "freshWindowMinutes": 30,
+              "staleWindowMinutes": 120
+            }
+          },
+          "flags": []
+        }
+      ],
+      "excluded": [
+        {
+          "hospitalId": "H01",
+          "name": "Crescent Heart Institute",
+          "eligibility": "EXCLUDED",
+          "matchScore": null,
+          "reasons": [
+            "Rejected this referral (1 min ago)"
+          ],
+          "hardConstraints": [
+            {
+              "requirement": "Hospital accepting emergencies",
+              "result": "Pass",
+              "detail": "Status: operational"
+            },
+            {
+              "requirement": "Not previously rejected for this case",
+              "result": "Fail",
+              "detail": "Rejected this referral (1 min ago)"
+            },
+            {
+              "requirement": "Specialty: cardiology",
+              "result": "Pass",
+              "detail": "Reported in directory"
+            },
+            {
+              "requirement": "ER bed \u2265 1",
+              "result": "Pass",
+              "detail": "5 reported \u00b7 updated 13 min ago"
+            },
+            {
+              "requirement": "cath lab \u2265 1",
+              "result": "Pass",
+              "detail": "1 reported \u00b7 updated 25 min ago"
+            },
+            {
+              "requirement": "cardiologist \u2265 1",
+              "result": "Pass",
+              "detail": "2 reported \u00b7 updated 20 min ago"
+            },
+            {
+              "requirement": "ICU bed \u2265 1",
+              "result": "Pass",
+              "detail": "3 reported \u00b7 updated 17 min ago"
+            }
+          ]
+        },
+        {
+          "hospitalId": "H03",
+          "name": "Northbridge General Hospital",
+          "eligibility": "EXCLUDED",
+          "matchScore": null,
+          "reasons": [
+            "Required service not reported: cardiology"
+          ],
+          "hardConstraints": [
+            {
+              "requirement": "Hospital accepting emergencies",
+              "result": "Pass",
+              "detail": "Status: operational"
+            },
+            {
+              "requirement": "Specialty: cardiology",
+              "result": "Fail",
+              "detail": "Required service not reported: cardiology"
+            },
+            {
+              "requirement": "ER bed \u2265 1",
+              "result": "Pass",
+              "detail": "8 reported \u00b7 updated 15 min ago"
+            },
+            {
+              "requirement": "cath lab \u2265 1",
+              "result": "Unknown",
+              "detail": "No report on record"
+            },
+            {
+              "requirement": "cardiologist \u2265 1",
+              "result": "Unknown",
+              "detail": "No report on record"
+            },
+            {
+              "requirement": "ICU bed \u2265 1",
+              "result": "Pass",
+              "detail": "4 reported \u00b7 updated 23 min ago"
+            }
+          ]
+        }
+      ],
+      "warnings": [
+        "Only one eligible candidate \u2014 consider confirming a backup option",
+        "Top candidate carries data-quality flags \u2014 review before requesting referral"
+      ],
+      "requiresHumanReview": true,
+      "disclaimer": "Match score ranks operational suitability using reported, possibly incomplete data. It is not a probability of successful treatment, does not guarantee availability, and requires human review and explicit receiving-hospital acceptance. Prototype values are illustrative."
+    }
+  },
+  "shortageWarnings": [
+    {
+      "hospitalId": "H01",
+      "hospitalName": "Crescent Heart Institute",
+      "resourceType": "er_bed",
+      "resourceName": "ER bed",
+      "warning": "High reported demand",
+      "reasons": [
+        "Expected demand 6.0 in next 4 h \u2265 5 reported available"
+      ],
+      "inputs": {
+        "availableCount": 5,
+        "totalCount": 20,
+        "expectedDemand": 6.0,
+        "horizonHours": 4
+      },
+      "reportedAt": "2026-10-13T08:52:00+00:00",
+      "freshness": "Fresh",
+      "note": "Early warning based on reported data and configurable thresholds \u2014 not a prediction that resources will run out."
+    },
+    {
+      "hospitalId": "H02",
+      "hospitalName": "Seaview Medical Centre",
+      "resourceType": "er_bed",
+      "resourceName": "ER bed",
+      "warning": "High reported demand",
+      "reasons": [
+        "Expected demand 6.0 in next 4 h \u2265 6 reported available"
+      ],
+      "inputs": {
+        "availableCount": 6,
+        "totalCount": 25,
+        "expectedDemand": 6.0,
+        "horizonHours": 4
+      },
+      "reportedAt": "2026-10-13T08:55:00+00:00",
+      "freshness": "Fresh",
+      "note": "Early warning based on reported data and configurable thresholds \u2014 not a prediction that resources will run out."
+    },
+    {
+      "hospitalId": "H02",
+      "hospitalName": "Seaview Medical Centre",
+      "resourceType": "icu_bed",
+      "resourceName": "ICU bed",
+      "warning": "Potential shortage",
+      "reasons": [
+        "2 of 10 remaining (20% \u2264 20% threshold)"
+      ],
+      "inputs": {
+        "availableCount": 2,
+        "totalCount": 10,
+        "expectedDemand": null,
+        "horizonHours": null
+      },
+      "reportedAt": "2026-10-13T07:25:00+00:00",
+      "freshness": "Stale",
+      "note": "Early warning based on reported data and configurable thresholds \u2014 not a prediction that resources will run out."
+    },
+    {
+      "hospitalId": "H04",
+      "hospitalName": "Palm Grove Hospital",
+      "resourceType": "er_bed",
+      "resourceName": "ER bed",
+      "warning": "High reported demand",
+      "reasons": [
+        "Expected demand 6.0 in next 4 h \u2265 4 reported available"
+      ],
+      "inputs": {
+        "availableCount": 4,
+        "totalCount": 15,
+        "expectedDemand": 6.0,
+        "horizonHours": 4
+      },
+      "reportedAt": "2026-10-13T08:48:00+00:00",
+      "freshness": "Fresh",
+      "note": "Early warning based on reported data and configurable thresholds \u2014 not a prediction that resources will run out."
+    },
+    {
+      "hospitalId": "H05",
+      "hospitalName": "Meridian Trauma Centre",
+      "resourceType": "er_bed",
+      "resourceName": "ER bed",
+      "warning": "Potential shortage",
+      "reasons": [
+        "3 of 18 remaining (17% \u2264 20% threshold)",
+        "Expected demand 6.0 in next 4 h \u2265 3 reported available"
+      ],
+      "inputs": {
+        "availableCount": 3,
+        "totalCount": 18,
+        "expectedDemand": 6.0,
+        "horizonHours": 4
+      },
+      "reportedAt": "2026-10-13T08:54:00+00:00",
+      "freshness": "Fresh",
+      "note": "Early warning based on reported data and configurable thresholds \u2014 not a prediction that resources will run out."
+    },
+    {
+      "hospitalId": "H05",
+      "hospitalName": "Meridian Trauma Centre",
+      "resourceType": "icu_bed",
+      "resourceName": "ICU bed",
+      "warning": "Potential shortage",
+      "reasons": [
+        "1 of 10 remaining (10% \u2264 20% threshold)",
+        "1 unit(s) remaining (\u2264 1 threshold)"
+      ],
+      "inputs": {
+        "availableCount": 1,
+        "totalCount": 10,
+        "expectedDemand": null,
+        "horizonHours": null
+      },
+      "reportedAt": "2026-10-13T08:51:00+00:00",
+      "freshness": "Fresh",
+      "note": "Early warning based on reported data and configurable thresholds \u2014 not a prediction that resources will run out."
+    },
+    {
+      "hospitalId": "H05",
+      "hospitalName": "Meridian Trauma Centre",
+      "resourceType": "operating_theatre",
+      "resourceName": "operating theatre",
+      "warning": "Potential shortage",
+      "reasons": [
+        "1 of 5 remaining (20% \u2264 20% threshold)",
+        "1 unit(s) remaining (\u2264 1 threshold)"
+      ],
+      "inputs": {
+        "availableCount": 1,
+        "totalCount": 5,
+        "expectedDemand": null,
+        "horizonHours": null
+      },
+      "reportedAt": "2026-10-13T08:53:00+00:00",
+      "freshness": "Fresh",
+      "note": "Early warning based on reported data and configurable thresholds \u2014 not a prediction that resources will run out."
+    },
+    {
+      "hospitalId": "H06",
+      "hospitalName": "Lotus Women & Children Hospital",
+      "resourceType": "er_bed",
+      "resourceName": "ER bed",
+      "warning": "High reported demand",
+      "reasons": [
+        "Expected demand 6.0 in next 4 h \u2265 5 reported available"
+      ],
+      "inputs": {
+        "availableCount": 5,
+        "totalCount": 12,
+        "expectedDemand": 6.0,
+        "horizonHours": 4
+      },
+      "reportedAt": "2026-10-13T08:46:00+00:00",
+      "freshness": "Fresh",
+      "note": "Early warning based on reported data and configurable thresholds \u2014 not a prediction that resources will run out."
+    },
+    {
+      "hospitalId": "H06",
+      "hospitalName": "Lotus Women & Children Hospital",
+      "resourceType": "nicu_bed",
+      "resourceName": "NICU bed",
+      "warning": "Potential shortage",
+      "reasons": [
+        "2 of 10 remaining (20% \u2264 20% threshold)"
+      ],
+      "inputs": {
+        "availableCount": 2,
+        "totalCount": 10,
+        "expectedDemand": null,
+        "horizonHours": null
+      },
+      "reportedAt": "2026-10-13T08:38:00+00:00",
+      "freshness": "Fresh",
+      "note": "Early warning based on reported data and configurable thresholds \u2014 not a prediction that resources will run out."
+    },
+    {
+      "hospitalId": "H06",
+      "hospitalName": "Lotus Women & Children Hospital",
+      "resourceType": "operating_theatre",
+      "resourceName": "operating theatre",
+      "warning": "Potential shortage",
+      "reasons": [
+        "1 unit(s) remaining (\u2264 1 threshold)"
+      ],
+      "inputs": {
+        "availableCount": 1,
+        "totalCount": 3,
+        "expectedDemand": null,
+        "horizonHours": null
+      },
+      "reportedAt": "2026-10-13T08:42:00+00:00",
+      "freshness": "Fresh",
+      "note": "Early warning based on reported data and configurable thresholds \u2014 not a prediction that resources will run out."
+    },
+    {
+      "hospitalId": "H06",
+      "hospitalName": "Lotus Women & Children Hospital",
+      "resourceType": "ventilator",
+      "resourceName": "ventilator",
+      "warning": "Potential shortage",
+      "reasons": [
+        "1 unit(s) remaining (\u2264 1 threshold)"
+      ],
+      "inputs": {
+        "availableCount": 1,
+        "totalCount": 4,
+        "expectedDemand": null,
+        "horizonHours": null
+      },
+      "reportedAt": "2026-10-13T08:30:00+00:00",
+      "freshness": "Fresh",
+      "note": "Early warning based on reported data and configurable thresholds \u2014 not a prediction that resources will run out."
+    },
+    {
+      "hospitalId": "H07",
+      "hospitalName": "Sunrise Burns & Plastic Surgery Unit",
+      "resourceType": "burn_bed",
+      "resourceName": "burn bed",
+      "warning": "Potential shortage",
+      "reasons": [
+        "1 of 12 remaining (8% \u2264 20% threshold)",
+        "1 unit(s) remaining (\u2264 1 threshold)"
+      ],
+      "inputs": {
+        "availableCount": 1,
+        "totalCount": 12,
+        "expectedDemand": null,
+        "horizonHours": null
+      },
+      "reportedAt": "2026-10-13T08:25:00+00:00",
+      "freshness": "Fresh",
+      "note": "Early warning based on reported data and configurable thresholds \u2014 not a prediction that resources will run out."
+    },
+    {
+      "hospitalId": "H07",
+      "hospitalName": "Sunrise Burns & Plastic Surgery Unit",
+      "resourceType": "er_bed",
+      "resourceName": "ER bed",
+      "warning": "High reported demand",
+      "reasons": [
+        "Expected demand 6.0 in next 4 h \u2265 2 reported available"
+      ],
+      "inputs": {
+        "availableCount": 2,
+        "totalCount": 6,
+        "expectedDemand": 6.0,
+        "horizonHours": 4
+      },
+      "reportedAt": "2026-10-13T08:40:00+00:00",
+      "freshness": "Fresh",
+      "note": "Early warning based on reported data and configurable thresholds \u2014 not a prediction that resources will run out."
+    },
+    {
+      "hospitalId": "H07",
+      "hospitalName": "Sunrise Burns & Plastic Surgery Unit",
+      "resourceType": "icu_bed",
+      "resourceName": "ICU bed",
+      "warning": "Potential shortage",
+      "reasons": [
+        "1 unit(s) remaining (\u2264 1 threshold)"
+      ],
+      "inputs": {
+        "availableCount": 1,
+        "totalCount": 4,
+        "expectedDemand": null,
+        "horizonHours": null
+      },
+      "reportedAt": "2026-10-13T08:32:00+00:00",
+      "freshness": "Fresh",
+      "note": "Early warning based on reported data and configurable thresholds \u2014 not a prediction that resources will run out."
+    },
+    {
+      "hospitalId": "H08",
+      "hospitalName": "Riverside Neuro Centre",
+      "resourceType": "er_bed",
+      "resourceName": "ER bed",
+      "warning": "High reported demand",
+      "reasons": [
+        "Expected demand 6.0 in next 4 h \u2265 4 reported available"
+      ],
+      "inputs": {
+        "availableCount": 4,
+        "totalCount": 10,
+        "expectedDemand": 6.0,
+        "horizonHours": 4
+      },
+      "reportedAt": "2026-10-13T08:51:00+00:00",
+      "freshness": "Fresh",
+      "note": "Early warning based on reported data and configurable thresholds \u2014 not a prediction that resources will run out."
+    },
+    {
+      "hospitalId": "H09",
+      "hospitalName": "Greenfield District Hospital",
+      "resourceType": "er_bed",
+      "resourceName": "ER bed",
+      "warning": "High reported demand",
+      "reasons": [
+        "Expected demand 6.0 in next 4 h \u2265 6 reported available"
+      ],
+      "inputs": {
+        "availableCount": 6,
+        "totalCount": 20,
+        "expectedDemand": 6.0,
+        "horizonHours": 4
+      },
+      "reportedAt": "2026-10-13T08:35:00+00:00",
+      "freshness": "Fresh",
+      "note": "Early warning based on reported data and configurable thresholds \u2014 not a prediction that resources will run out."
+    },
+    {
+      "hospitalId": "H09",
+      "hospitalName": "Greenfield District Hospital",
+      "resourceType": "operating_theatre",
+      "resourceName": "operating theatre",
+      "warning": "Potential shortage",
+      "reasons": [
+        "1 unit(s) remaining (\u2264 1 threshold)"
+      ],
+      "inputs": {
+        "availableCount": 1,
+        "totalCount": 3,
+        "expectedDemand": null,
+        "horizonHours": null
+      },
+      "reportedAt": "2026-10-13T08:20:00+00:00",
+      "freshness": "Stale",
+      "note": "Early warning based on reported data and configurable thresholds \u2014 not a prediction that resources will run out."
+    },
+    {
+      "hospitalId": "H10",
+      "hospitalName": "Eastgate Community Hospital",
+      "resourceType": "er_bed",
+      "resourceName": "ER bed",
+      "warning": "Potential shortage",
+      "reasons": [
+        "0 of 10 remaining (0% \u2264 20% threshold)",
+        "0 unit(s) remaining (\u2264 1 threshold)"
+      ],
+      "inputs": {
+        "availableCount": 0,
+        "totalCount": 10,
+        "expectedDemand": 6.0,
+        "horizonHours": 4
+      },
+      "reportedAt": "2026-10-13T08:50:00+00:00",
+      "freshness": "Fresh",
+      "note": "Early warning based on reported data and configurable thresholds \u2014 not a prediction that resources will run out."
+    },
+    {
+      "hospitalId": "H10",
+      "hospitalName": "Eastgate Community Hospital",
+      "resourceType": "icu_bed",
+      "resourceName": "ICU bed",
+      "warning": "Potential shortage",
+      "reasons": [
+        "0 of 4 remaining (0% \u2264 20% threshold)",
+        "0 unit(s) remaining (\u2264 1 threshold)"
+      ],
+      "inputs": {
+        "availableCount": 0,
+        "totalCount": 4,
+        "expectedDemand": null,
+        "horizonHours": null
+      },
+      "reportedAt": "2026-10-13T08:50:00+00:00",
+      "freshness": "Fresh",
+      "note": "Early warning based on reported data and configurable thresholds \u2014 not a prediction that resources will run out."
+    },
+    {
+      "hospitalId": "H11",
+      "hospitalName": "Harborline Medical College Hospital",
+      "resourceType": "burn_bed",
+      "resourceName": "burn bed",
+      "warning": "Potential shortage",
+      "reasons": [
+        "0 of 6 remaining (0% \u2264 20% threshold)",
+        "0 unit(s) remaining (\u2264 1 threshold)"
+      ],
+      "inputs": {
+        "availableCount": 0,
+        "totalCount": 6,
+        "expectedDemand": null,
+        "horizonHours": null
+      },
+      "reportedAt": "2026-10-13T08:10:00+00:00",
+      "freshness": "Fresh",
+      "note": "Early warning based on reported data and configurable thresholds \u2014 not a prediction that resources will run out."
+    },
+    {
+      "hospitalId": "H11",
+      "hospitalName": "Harborline Medical College Hospital",
+      "resourceType": "operating_theatre",
+      "resourceName": "operating theatre",
+      "warning": "Potential shortage",
+      "reasons": [
+        "2 of 10 remaining (20% \u2264 20% threshold)"
+      ],
+      "inputs": {
+        "availableCount": 2,
+        "totalCount": 10,
+        "expectedDemand": null,
+        "horizonHours": null
+      },
+      "reportedAt": "2026-10-13T08:35:00+00:00",
+      "freshness": "Fresh",
+      "note": "Early warning based on reported data and configurable thresholds \u2014 not a prediction that resources will run out."
+    },
+    {
+      "hospitalId": "H12",
+      "hospitalName": "Saffron Valley Hospital",
+      "resourceType": "er_bed",
+      "resourceName": "ER bed",
+      "warning": "High reported demand",
+      "reasons": [
+        "Expected demand 6.0 in next 4 h \u2265 3 reported available"
+      ],
+      "inputs": {
+        "availableCount": 3,
+        "totalCount": 10,
+        "expectedDemand": 6.0,
+        "horizonHours": 4
+      },
+      "reportedAt": "2026-10-13T08:45:00+00:00",
+      "freshness": "Fresh",
+      "note": "Early warning based on reported data and configurable thresholds \u2014 not a prediction that resources will run out."
+    }
+  ],
+  "forecast": {
+    "modelVersion": "arrivals-gbm-v1.0 (synthetic)",
+    "dataset": "synthetic hourly arrivals (fictional)",
+    "horizon": "24 hours ahead",
+    "trainRange": [
+      "2026-04-29 00:00:00+00:00",
+      "2026-09-13 23:00:00+00:00"
+    ],
+    "testRange": [
+      "2026-09-14 00:00:00+00:00",
+      "2026-09-27 23:00:00+00:00"
+    ],
+    "trainRows": 3312,
+    "testRows": 336,
+    "metrics": {
+      "Seasonal naive (same hour yesterday)": {
+        "MAE": 2.765,
+        "RMSE": 3.564
+      },
+      "Seasonal naive (same hour last week)": {
+        "MAE": 2.658,
+        "RMSE": 3.47
+      },
+      "Moving average (same hour, last 4 weeks)": {
+        "MAE": 2.306,
+        "RMSE": 2.895
+      },
+      "Gradient boosting (Poisson)": {
+        "MAE": 2.127,
+        "RMSE": 2.735
+      }
+    },
+    "bestBaseline": "Moving average (same hour, last 4 weeks)",
+    "mlImprovementOverBestBaselinePct": 7.8,
+    "interval80": {
+      "empiricalCoverageOnTest": 0.557,
+      "method": "training-residual quantiles (not calibrated on real data)"
+    },
+    "limitations": [
+      "Synthetic data with known seasonal structure \u2014 real arrivals are noisier and non-stationary",
+      "No external drivers (weather, events, holidays) beyond synthetic surges",
+      "Single held-out window; no rolling-origin backtest across seasons"
+    ]
+  },
+  "surge": {
+    "timeline": [
+      {
+        "minuteOffset": 0,
+        "caseId": "SURGE-01",
+        "eligible": 4,
+        "needsConfirmation": 0,
+        "excluded": 8,
+        "assignedTo": "H05",
+        "topScore": 85.3,
+        "totalRemaining": 76,
+        "unplacedSoFar": 0
+      },
+      {
+        "minuteOffset": 3,
+        "caseId": "SURGE-02",
+        "eligible": 3,
+        "needsConfirmation": 1,
+        "excluded": 8,
+        "assignedTo": "H11",
+        "topScore": 60.2,
+        "totalRemaining": 75,
+        "unplacedSoFar": 0
+      },
+      {
+        "minuteOffset": 7,
+        "caseId": "SURGE-03",
+        "eligible": 3,
+        "needsConfirmation": 1,
+        "excluded": 8,
+        "assignedTo": "H11",
+        "topScore": 70.1,
+        "totalRemaining": 74,
+        "unplacedSoFar": 0
+      },
+      {
+        "minuteOffset": 11,
+        "caseId": "SURGE-04",
+        "eligible": 2,
+        "needsConfirmation": 1,
+        "excluded": 9,
+        "assignedTo": "H03",
+        "topScore": 64.6,
+        "totalRemaining": 73,
+        "unplacedSoFar": 0
+      },
+      {
+        "minuteOffset": 15,
+        "caseId": "SURGE-05",
+        "eligible": 2,
+        "needsConfirmation": 0,
+        "excluded": 10,
+        "assignedTo": "H03",
+        "topScore": 61.1,
+        "totalRemaining": 69,
+        "unplacedSoFar": 0
+      },
+      {
+        "minuteOffset": 18,
+        "caseId": "SURGE-06",
+        "eligible": 2,
+        "needsConfirmation": 0,
+        "excluded": 10,
+        "assignedTo": "H03",
+        "topScore": 59.1,
+        "totalRemaining": 68,
+        "unplacedSoFar": 0
+      },
+      {
+        "minuteOffset": 22,
+        "caseId": "SURGE-07",
+        "eligible": 1,
+        "needsConfirmation": 0,
+        "excluded": 11,
+        "assignedTo": "H02",
+        "topScore": 25.1,
+        "totalRemaining": 67,
+        "unplacedSoFar": 0
+      },
+      {
+        "minuteOffset": 26,
+        "caseId": "SURGE-08",
+        "eligible": 1,
+        "needsConfirmation": 0,
+        "excluded": 11,
+        "assignedTo": "H02",
+        "topScore": 45.2,
+        "totalRemaining": 66,
+        "unplacedSoFar": 0
+      },
+      {
+        "minuteOffset": 30,
+        "caseId": "SURGE-09",
+        "eligible": 0,
+        "needsConfirmation": 0,
+        "excluded": 12,
+        "assignedTo": null,
+        "topScore": null,
+        "totalRemaining": 66,
+        "unplacedSoFar": 1
+      },
+      {
+        "minuteOffset": 33,
+        "caseId": "SURGE-10",
+        "eligible": 0,
+        "needsConfirmation": 0,
+        "excluded": 12,
+        "assignedTo": null,
+        "topScore": null,
+        "totalRemaining": 66,
+        "unplacedSoFar": 2
+      },
+      {
+        "minuteOffset": 37,
+        "caseId": "SURGE-11",
+        "eligible": 0,
+        "needsConfirmation": 0,
+        "excluded": 12,
+        "assignedTo": null,
+        "topScore": null,
+        "totalRemaining": 66,
+        "unplacedSoFar": 3
+      },
+      {
+        "minuteOffset": 41,
+        "caseId": "SURGE-12",
+        "eligible": 0,
+        "needsConfirmation": 0,
+        "excluded": 12,
+        "assignedTo": null,
+        "topScore": null,
+        "totalRemaining": 66,
+        "unplacedSoFar": 4
+      },
+      {
+        "minuteOffset": 45,
+        "caseId": "SURGE-13",
+        "eligible": 0,
+        "needsConfirmation": 0,
+        "excluded": 12,
+        "assignedTo": null,
+        "topScore": null,
+        "totalRemaining": 66,
+        "unplacedSoFar": 5
+      },
+      {
+        "minuteOffset": 48,
+        "caseId": "SURGE-14",
+        "eligible": 0,
+        "needsConfirmation": 0,
+        "excluded": 12,
+        "assignedTo": null,
+        "topScore": null,
+        "totalRemaining": 66,
+        "unplacedSoFar": 6
+      },
+      {
+        "minuteOffset": 52,
+        "caseId": "SURGE-15",
+        "eligible": 0,
+        "needsConfirmation": 0,
+        "excluded": 12,
+        "assignedTo": null,
+        "topScore": null,
+        "totalRemaining": 66,
+        "unplacedSoFar": 7
+      },
+      {
+        "minuteOffset": 56,
+        "caseId": "SURGE-16",
+        "eligible": 0,
+        "needsConfirmation": 0,
+        "excluded": 12,
+        "assignedTo": null,
+        "topScore": null,
+        "totalRemaining": 66,
+        "unplacedSoFar": 8
+      }
+    ],
+    "casesSimulated": 16,
+    "unplacedCases": 8,
+    "assumptions": [
+      "Every simulated referral is accepted by the #1 ranked candidate",
+      "Assigned resources stay occupied for the whole simulation (no discharges)",
+      "Fictional hospitals and demand \u2014 illustrative only"
+    ]
+  },
+  "runtimeSeconds": 20.5
+}

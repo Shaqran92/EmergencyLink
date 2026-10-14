@@ -1,0 +1,1487 @@
+{
+  "description": "EmergencyLink demo \u2014 fictional cardiac case EL-DEMO-001",
+  "step1_initialRanking": {
+    "emergency": {
+      "caseId": "EL-DEMO-001",
+      "priorityCategory": "P1",
+      "operationalSummary": "Suspected cardiac emergency \u2014 needs cath lab",
+      "location": {
+        "lat": 24.86,
+        "lng": 67.01
+      },
+      "requiredResources": [
+        {
+          "resourceType": "er_bed",
+          "minCount": 1
+        },
+        {
+          "resourceType": "cath_lab",
+          "minCount": 1
+        },
+        {
+          "resourceType": "cardiologist",
+          "minCount": 1
+        },
+        {
+          "resourceType": "icu_bed",
+          "minCount": 1
+        }
+      ],
+      "requiredSpecialties": [
+        "cardiology"
+      ],
+      "preferredResources": [
+        "ventilator"
+      ],
+      "preferredSpecialties": [],
+      "status": "registered",
+      "createdAt": "2026-10-13T08:54:00Z",
+      "fictional": true
+    },
+    "hospitals": [
+      {
+        "hospitalId": "H01",
+        "name": "Crescent Heart Institute",
+        "location": {
+          "lat": 24.8607,
+          "lng": 67.042
+        },
+        "specialties": [
+          "cardiology",
+          "cardiac surgery",
+          "internal medicine"
+        ],
+        "status": "operational",
+        "fictional": true
+      },
+      {
+        "hospitalId": "H02",
+        "name": "Seaview Medical Centre",
+        "location": {
+          "lat": 24.8138,
+          "lng": 67.03
+        },
+        "specialties": [
+          "emergency medicine",
+          "cardiology",
+          "general surgery",
+          "trauma surgery"
+        ],
+        "status": "operational",
+        "fictional": true
+      },
+      {
+        "hospitalId": "H03",
+        "name": "Northbridge General Hospital",
+        "location": {
+          "lat": 24.95,
+          "lng": 67.06
+        },
+        "specialties": [
+          "general medicine",
+          "general surgery",
+          "orthopedics",
+          "trauma surgery"
+        ],
+        "status": "operational",
+        "fictional": true
+      },
+      {
+        "hospitalId": "H04",
+        "name": "Palm Grove Hospital",
+        "location": {
+          "lat": 24.9,
+          "lng": 67.11
+        },
+        "specialties": [
+          "cardiology",
+          "general medicine"
+        ],
+        "status": "operational",
+        "fictional": true
+      }
+    ],
+    "resourceSnapshots": [
+      {
+        "snapshotId": "RS-0001",
+        "hospitalId": "H01",
+        "resourceType": "er_bed",
+        "availableCount": 6,
+        "totalCount": 20,
+        "reportedAt": "2026-10-13T07:34:00Z",
+        "verifiedAt": "2026-10-13T07:34:00Z",
+        "reportedBy": "h01.ops",
+        "version": 2
+      },
+      {
+        "snapshotId": "RS-0002",
+        "hospitalId": "H01",
+        "resourceType": "er_bed",
+        "availableCount": 5,
+        "totalCount": 20,
+        "reportedAt": "2026-10-13T08:52:00Z",
+        "verifiedAt": "2026-10-13T08:52:00Z",
+        "reportedBy": "h01.ops",
+        "version": 3
+      },
+      {
+        "snapshotId": "RS-0003",
+        "hospitalId": "H01",
+        "resourceType": "icu_bed",
+        "availableCount": 4,
+        "totalCount": 12,
+        "reportedAt": "2026-10-13T07:35:00Z",
+        "verifiedAt": "2026-10-13T07:35:00Z",
+        "reportedBy": "h01.ops",
+        "version": 2
+      },
+      {
+        "snapshotId": "RS-0004",
+        "hospitalId": "H01",
+        "resourceType": "icu_bed",
+        "availableCount": 3,
+        "totalCount": 12,
+        "reportedAt": "2026-10-13T08:48:00Z",
+        "verifiedAt": "2026-10-13T08:48:00Z",
+        "reportedBy": "h01.ops",
+        "version": 3
+      },
+      {
+        "snapshotId": "RS-0005",
+        "hospitalId": "H01",
+        "resourceType": "cath_lab",
+        "availableCount": 1,
+        "totalCount": 2,
+        "reportedAt": "2026-10-13T07:03:00Z",
+        "verifiedAt": "2026-10-13T07:03:00Z",
+        "reportedBy": "h01.ops",
+        "version": 2
+      },
+      {
+        "snapshotId": "RS-0006",
+        "hospitalId": "H01",
+        "resourceType": "cath_lab",
+        "availableCount": 1,
+        "totalCount": 2,
+        "reportedAt": "2026-10-13T08:40:00Z",
+        "verifiedAt": "2026-10-13T08:40:00Z",
+        "reportedBy": "h01.ops",
+        "version": 3
+      },
+      {
+        "snapshotId": "RS-0007",
+        "hospitalId": "H01",
+        "resourceType": "cardiologist",
+        "availableCount": 3,
+        "totalCount": 3,
+        "reportedAt": "2026-10-13T06:25:00Z",
+        "verifiedAt": "2026-10-13T06:25:00Z",
+        "reportedBy": "h01.ops",
+        "version": 1
+      },
+      {
+        "snapshotId": "RS-0008",
+        "hospitalId": "H01",
+        "resourceType": "cardiologist",
+        "availableCount": 1,
+        "totalCount": 3,
+        "reportedAt": "2026-10-13T07:28:00Z",
+        "verifiedAt": "2026-10-13T07:28:00Z",
+        "reportedBy": "h01.ops",
+        "version": 2
+      },
+      {
+        "snapshotId": "RS-0009",
+        "hospitalId": "H01",
+        "resourceType": "cardiologist",
+        "availableCount": 2,
+        "totalCount": 3,
+        "reportedAt": "2026-10-13T08:45:00Z",
+        "verifiedAt": "2026-10-13T08:45:00Z",
+        "reportedBy": "h01.ops",
+        "version": 3
+      },
+      {
+        "snapshotId": "RS-0010",
+        "hospitalId": "H01",
+        "resourceType": "ventilator",
+        "availableCount": 4,
+        "totalCount": 10,
+        "reportedAt": "2026-10-13T07:06:00Z",
+        "verifiedAt": "2026-10-13T07:06:00Z",
+        "reportedBy": "h01.ops",
+        "version": 2
+      },
+      {
+        "snapshotId": "RS-0011",
+        "hospitalId": "H01",
+        "resourceType": "ventilator",
+        "availableCount": 4,
+        "totalCount": 10,
+        "reportedAt": "2026-10-13T08:20:00Z",
+        "verifiedAt": "2026-10-13T08:20:00Z",
+        "reportedBy": "h01.ops",
+        "version": 3
+      },
+      {
+        "snapshotId": "RS-0012",
+        "hospitalId": "H01",
+        "resourceType": "ct_scanner",
+        "availableCount": 1,
+        "totalCount": 1,
+        "reportedAt": "2026-10-13T06:35:00Z",
+        "verifiedAt": "2026-10-13T06:35:00Z",
+        "reportedBy": "h01.ops",
+        "version": 2
+      },
+      {
+        "snapshotId": "RS-0013",
+        "hospitalId": "H01",
+        "resourceType": "ct_scanner",
+        "availableCount": 1,
+        "totalCount": 1,
+        "reportedAt": "2026-10-13T08:10:00Z",
+        "verifiedAt": "2026-10-13T08:10:00Z",
+        "reportedBy": "h01.ops",
+        "version": 3
+      },
+      {
+        "snapshotId": "RS-0014",
+        "hospitalId": "H02",
+        "resourceType": "er_bed",
+        "availableCount": 5,
+        "totalCount": 25,
+        "reportedAt": "2026-10-13T06:35:00Z",
+        "verifiedAt": "2026-10-13T06:35:00Z",
+        "reportedBy": "h02.ops",
+        "version": 1
+      },
+      {
+        "snapshotId": "RS-0015",
+        "hospitalId": "H02",
+        "resourceType": "er_bed",
+        "availableCount": 7,
+        "totalCount": 25,
+        "reportedAt": "2026-10-13T07:49:00Z",
+        "verifiedAt": "2026-10-13T07:49:00Z",
+        "reportedBy": "h02.ops",
+        "version": 2
+      },
+      {
+        "snapshotId": "RS-0016",
+        "hospitalId": "H02",
+        "resourceType": "er_bed",
+        "availableCount": 6,
+        "totalCount": 25,
+        "reportedAt": "2026-10-13T08:55:00Z",
+        "verifiedAt": "2026-10-13T08:55:00Z",
+        "reportedBy": "h02.ops",
+        "version": 3
+      },
+      {
+        "snapshotId": "RS-0017",
+        "hospitalId": "H02",
+        "resourceType": "icu_bed",
+        "availableCount": 1,
+        "totalCount": 10,
+        "reportedAt": "2026-10-13T05:48:00Z",
+        "verifiedAt": null,
+        "reportedBy": "h02.ops",
+        "version": 2
+      },
+      {
+        "snapshotId": "RS-0018",
+        "hospitalId": "H02",
+        "resourceType": "icu_bed",
+        "availableCount": 2,
+        "totalCount": 10,
+        "reportedAt": "2026-10-13T07:25:00Z",
+        "verifiedAt": null,
+        "reportedBy": "h02.ops",
+        "version": 3
+      },
+      {
+        "snapshotId": "RS-0019",
+        "hospitalId": "H02",
+        "resourceType": "cath_lab",
+        "availableCount": 1,
+        "totalCount": 1,
+        "reportedAt": "2026-10-13T07:01:00Z",
+        "verifiedAt": "2026-10-13T07:01:00Z",
+        "reportedBy": "h02.ops",
+        "version": 2
+      },
+      {
+        "snapshotId": "RS-0020",
+        "hospitalId": "H02",
+        "resourceType": "cath_lab",
+        "availableCount": 1,
+        "totalCount": 1,
+        "reportedAt": "2026-10-13T08:35:00Z",
+        "verifiedAt": "2026-10-13T08:35:00Z",
+        "reportedBy": "h02.ops",
+        "version": 3
+      },
+      {
+        "snapshotId": "RS-0021",
+        "hospitalId": "H02",
+        "resourceType": "cardiologist",
+        "availableCount": 2,
+        "totalCount": 2,
+        "reportedAt": "2026-10-13T05:58:00Z",
+        "verifiedAt": "2026-10-13T05:58:00Z",
+        "reportedBy": "h02.ops",
+        "version": 1
+      },
+      {
+        "snapshotId": "RS-0022",
+        "hospitalId": "H02",
+        "resourceType": "cardiologist",
+        "availableCount": 0,
+        "totalCount": 2,
+        "reportedAt": "2026-10-13T07:13:00Z",
+        "verifiedAt": "2026-10-13T07:13:00Z",
+        "reportedBy": "h02.ops",
+        "version": 2
+      },
+      {
+        "snapshotId": "RS-0023",
+        "hospitalId": "H02",
+        "resourceType": "cardiologist",
+        "availableCount": 1,
+        "totalCount": 2,
+        "reportedAt": "2026-10-13T08:30:00Z",
+        "verifiedAt": "2026-10-13T08:30:00Z",
+        "reportedBy": "h02.ops",
+        "version": 3
+      },
+      {
+        "snapshotId": "RS-0024",
+        "hospitalId": "H02",
+        "resourceType": "ct_scanner",
+        "availableCount": 2,
+        "totalCount": 2,
+        "reportedAt": "2026-10-13T05:43:00Z",
+        "verifiedAt": "2026-10-13T05:43:00Z",
+        "reportedBy": "h02.ops",
+        "version": 1
+      },
+      {
+        "snapshotId": "RS-0025",
+        "hospitalId": "H02",
+        "resourceType": "ct_scanner",
+        "availableCount": 1,
+        "totalCount": 2,
+        "reportedAt": "2026-10-13T06:28:00Z",
+        "verifiedAt": "2026-10-13T06:28:00Z",
+        "reportedBy": "h02.ops",
+        "version": 2
+      },
+      {
+        "snapshotId": "RS-0026",
+        "hospitalId": "H02",
+        "resourceType": "ct_scanner",
+        "availableCount": 1,
+        "totalCount": 2,
+        "reportedAt": "2026-10-13T08:00:00Z",
+        "verifiedAt": "2026-10-13T08:00:00Z",
+        "reportedBy": "h02.ops",
+        "version": 3
+      },
+      {
+        "snapshotId": "RS-0027",
+        "hospitalId": "H02",
+        "resourceType": "operating_theatre",
+        "availableCount": 1,
+        "totalCount": 6,
+        "reportedAt": "2026-10-13T07:29:00Z",
+        "verifiedAt": "2026-10-13T07:29:00Z",
+        "reportedBy": "h02.ops",
+        "version": 2
+      },
+      {
+        "snapshotId": "RS-0028",
+        "hospitalId": "H02",
+        "resourceType": "operating_theatre",
+        "availableCount": 2,
+        "totalCount": 6,
+        "reportedAt": "2026-10-13T08:40:00Z",
+        "verifiedAt": "2026-10-13T08:40:00Z",
+        "reportedBy": "h02.ops",
+        "version": 3
+      },
+      {
+        "snapshotId": "RS-0029",
+        "hospitalId": "H02",
+        "resourceType": "blood_bank",
+        "availableCount": 0,
+        "totalCount": 1,
+        "reportedAt": "2026-10-13T05:41:00Z",
+        "verifiedAt": "2026-10-13T05:41:00Z",
+        "reportedBy": "h02.ops",
+        "version": 2
+      },
+      {
+        "snapshotId": "RS-0030",
+        "hospitalId": "H02",
+        "resourceType": "blood_bank",
+        "availableCount": 1,
+        "totalCount": 1,
+        "reportedAt": "2026-10-13T07:20:00Z",
+        "verifiedAt": "2026-10-13T07:20:00Z",
+        "reportedBy": "h02.ops",
+        "version": 3
+      },
+      {
+        "snapshotId": "RS-0031",
+        "hospitalId": "H02",
+        "resourceType": "trauma_team",
+        "availableCount": 1,
+        "totalCount": 1,
+        "reportedAt": "2026-10-13T06:59:00Z",
+        "verifiedAt": "2026-10-13T06:59:00Z",
+        "reportedBy": "h02.ops",
+        "version": 2
+      },
+      {
+        "snapshotId": "RS-0032",
+        "hospitalId": "H02",
+        "resourceType": "trauma_team",
+        "availableCount": 1,
+        "totalCount": 1,
+        "reportedAt": "2026-10-13T08:30:00Z",
+        "verifiedAt": "2026-10-13T08:30:00Z",
+        "reportedBy": "h02.ops",
+        "version": 3
+      },
+      {
+        "snapshotId": "RS-0033",
+        "hospitalId": "H03",
+        "resourceType": "er_bed",
+        "availableCount": 9,
+        "totalCount": 30,
+        "reportedAt": "2026-10-13T06:40:00Z",
+        "verifiedAt": "2026-10-13T06:40:00Z",
+        "reportedBy": "h03.ops",
+        "version": 1
+      },
+      {
+        "snapshotId": "RS-0034",
+        "hospitalId": "H03",
+        "resourceType": "er_bed",
+        "availableCount": 9,
+        "totalCount": 30,
+        "reportedAt": "2026-10-13T07:39:00Z",
+        "verifiedAt": "2026-10-13T07:39:00Z",
+        "reportedBy": "h03.ops",
+        "version": 2
+      },
+      {
+        "snapshotId": "RS-0035",
+        "hospitalId": "H03",
+        "resourceType": "er_bed",
+        "availableCount": 8,
+        "totalCount": 30,
+        "reportedAt": "2026-10-13T08:50:00Z",
+        "verifiedAt": "2026-10-13T08:50:00Z",
+        "reportedBy": "h03.ops",
+        "version": 3
+      },
+      {
+        "snapshotId": "RS-0036",
+        "hospitalId": "H03",
+        "resourceType": "icu_bed",
+        "availableCount": 5,
+        "totalCount": 15,
+        "reportedAt": "2026-10-13T07:11:00Z",
+        "verifiedAt": "2026-10-13T07:11:00Z",
+        "reportedBy": "h03.ops",
+        "version": 2
+      },
+      {
+        "snapshotId": "RS-0037",
+        "hospitalId": "H03",
+        "resourceType": "icu_bed",
+        "availableCount": 4,
+        "totalCount": 15,
+        "reportedAt": "2026-10-13T08:42:00Z",
+        "verifiedAt": "2026-10-13T08:42:00Z",
+        "reportedBy": "h03.ops",
+        "version": 3
+      },
+      {
+        "snapshotId": "RS-0038",
+        "hospitalId": "H03",
+        "resourceType": "ct_scanner",
+        "availableCount": 2,
+        "totalCount": 2,
+        "reportedAt": "2026-10-13T07:23:00Z",
+        "verifiedAt": "2026-10-13T07:23:00Z",
+        "reportedBy": "h03.ops",
+        "version": 2
+      },
+      {
+        "snapshotId": "RS-0039",
+        "hospitalId": "H03",
+        "resourceType": "ct_scanner",
+        "availableCount": 2,
+        "totalCount": 2,
+        "reportedAt": "2026-10-13T08:30:00Z",
+        "verifiedAt": "2026-10-13T08:30:00Z",
+        "reportedBy": "h03.ops",
+        "version": 3
+      },
+      {
+        "snapshotId": "RS-0040",
+        "hospitalId": "H03",
+        "resourceType": "operating_theatre",
+        "availableCount": 2,
+        "totalCount": 8,
+        "reportedAt": "2026-10-13T07:25:00Z",
+        "verifiedAt": "2026-10-13T07:25:00Z",
+        "reportedBy": "h03.ops",
+        "version": 2
+      },
+      {
+        "snapshotId": "RS-0041",
+        "hospitalId": "H03",
+        "resourceType": "operating_theatre",
+        "availableCount": 3,
+        "totalCount": 8,
+        "reportedAt": "2026-10-13T08:45:00Z",
+        "verifiedAt": "2026-10-13T08:45:00Z",
+        "reportedBy": "h03.ops",
+        "version": 3
+      },
+      {
+        "snapshotId": "RS-0042",
+        "hospitalId": "H03",
+        "resourceType": "blood_bank",
+        "availableCount": 1,
+        "totalCount": 1,
+        "reportedAt": "2026-10-13T06:53:00Z",
+        "verifiedAt": "2026-10-13T06:53:00Z",
+        "reportedBy": "h03.ops",
+        "version": 2
+      },
+      {
+        "snapshotId": "RS-0043",
+        "hospitalId": "H03",
+        "resourceType": "blood_bank",
+        "availableCount": 1,
+        "totalCount": 1,
+        "reportedAt": "2026-10-13T08:15:00Z",
+        "verifiedAt": "2026-10-13T08:15:00Z",
+        "reportedBy": "h03.ops",
+        "version": 3
+      },
+      {
+        "snapshotId": "RS-0044",
+        "hospitalId": "H03",
+        "resourceType": "trauma_team",
+        "availableCount": 1,
+        "totalCount": 1,
+        "reportedAt": "2026-10-13T06:08:00Z",
+        "verifiedAt": "2026-10-13T06:08:00Z",
+        "reportedBy": "h03.ops",
+        "version": 1
+      },
+      {
+        "snapshotId": "RS-0045",
+        "hospitalId": "H03",
+        "resourceType": "trauma_team",
+        "availableCount": 0,
+        "totalCount": 1,
+        "reportedAt": "2026-10-13T07:06:00Z",
+        "verifiedAt": "2026-10-13T07:06:00Z",
+        "reportedBy": "h03.ops",
+        "version": 2
+      },
+      {
+        "snapshotId": "RS-0046",
+        "hospitalId": "H03",
+        "resourceType": "trauma_team",
+        "availableCount": 1,
+        "totalCount": 1,
+        "reportedAt": "2026-10-13T08:35:00Z",
+        "verifiedAt": "2026-10-13T08:35:00Z",
+        "reportedBy": "h03.ops",
+        "version": 3
+      },
+      {
+        "snapshotId": "RS-0047",
+        "hospitalId": "H04",
+        "resourceType": "er_bed",
+        "availableCount": 3,
+        "totalCount": 15,
+        "reportedAt": "2026-10-13T07:34:00Z",
+        "verifiedAt": "2026-10-13T07:34:00Z",
+        "reportedBy": "h04.ops",
+        "version": 2
+      },
+      {
+        "snapshotId": "RS-0048",
+        "hospitalId": "H04",
+        "resourceType": "er_bed",
+        "availableCount": 4,
+        "totalCount": 15,
+        "reportedAt": "2026-10-13T08:48:00Z",
+        "verifiedAt": "2026-10-13T08:48:00Z",
+        "reportedBy": "h04.ops",
+        "version": 3
+      },
+      {
+        "snapshotId": "RS-0049",
+        "hospitalId": "H04",
+        "resourceType": "icu_bed",
+        "availableCount": 1,
+        "totalCount": 8,
+        "reportedAt": "2026-10-13T02:25:00Z",
+        "verifiedAt": "2026-10-13T02:25:00Z",
+        "reportedBy": "h04.ops",
+        "version": 2
+      },
+      {
+        "snapshotId": "RS-0050",
+        "hospitalId": "H04",
+        "resourceType": "icu_bed",
+        "availableCount": 2,
+        "totalCount": 8,
+        "reportedAt": "2026-10-13T04:00:00Z",
+        "verifiedAt": "2026-10-13T04:00:00Z",
+        "reportedBy": "h04.ops",
+        "version": 3
+      },
+      {
+        "snapshotId": "RS-0051",
+        "hospitalId": "H04",
+        "resourceType": "cath_lab",
+        "availableCount": 0,
+        "totalCount": 1,
+        "reportedAt": "2026-10-13T07:13:00Z",
+        "verifiedAt": "2026-10-13T07:13:00Z",
+        "reportedBy": "h04.ops",
+        "version": 2
+      },
+      {
+        "snapshotId": "RS-0052",
+        "hospitalId": "H04",
+        "resourceType": "cath_lab",
+        "availableCount": 1,
+        "totalCount": 1,
+        "reportedAt": "2026-10-13T08:20:00Z",
+        "verifiedAt": "2026-10-13T08:20:00Z",
+        "reportedBy": "h04.ops",
+        "version": 3
+      },
+      {
+        "snapshotId": "RS-0053",
+        "hospitalId": "H04",
+        "resourceType": "cardiologist",
+        "availableCount": 1,
+        "totalCount": 1,
+        "reportedAt": "2026-10-13T06:17:00Z",
+        "verifiedAt": "2026-10-13T06:17:00Z",
+        "reportedBy": "h04.ops",
+        "version": 1
+      },
+      {
+        "snapshotId": "RS-0054",
+        "hospitalId": "H04",
+        "resourceType": "cardiologist",
+        "availableCount": 1,
+        "totalCount": 1,
+        "reportedAt": "2026-10-13T06:53:00Z",
+        "verifiedAt": "2026-10-13T06:53:00Z",
+        "reportedBy": "h04.ops",
+        "version": 2
+      },
+      {
+        "snapshotId": "RS-0055",
+        "hospitalId": "H04",
+        "resourceType": "cardiologist",
+        "availableCount": 1,
+        "totalCount": 1,
+        "reportedAt": "2026-10-13T08:25:00Z",
+        "verifiedAt": "2026-10-13T08:25:00Z",
+        "reportedBy": "h04.ops",
+        "version": 3
+      }
+    ],
+    "travelEstimates": [
+      {
+        "hospitalId": "H01",
+        "etaMinMinutes": 14,
+        "etaMaxMinutes": 17,
+        "source": "live_traffic",
+        "estimatedAt": "2026-10-13T09:00:00Z"
+      },
+      {
+        "hospitalId": "H02",
+        "etaMinutes": 8,
+        "source": "map_routing",
+        "estimatedAt": "2026-10-13T09:00:00Z"
+      },
+      {
+        "hospitalId": "H03",
+        "etaMinMinutes": 11,
+        "etaMaxMinutes": 13,
+        "source": "live_traffic",
+        "estimatedAt": "2026-10-13T09:00:00Z"
+      },
+      {
+        "hospitalId": "H04",
+        "etaMinutes": 16,
+        "source": "map_routing",
+        "estimatedAt": "2026-10-13T09:00:00Z"
+      }
+    ],
+    "referenceTime": "2026-10-13T09:00:00Z"
+  },
+  "step2_afterRejectionByH01": {
+    "emergency": {
+      "caseId": "EL-DEMO-001",
+      "priorityCategory": "P1",
+      "operationalSummary": "Suspected cardiac emergency \u2014 needs cath lab",
+      "location": {
+        "lat": 24.86,
+        "lng": 67.01
+      },
+      "requiredResources": [
+        {
+          "resourceType": "er_bed",
+          "minCount": 1
+        },
+        {
+          "resourceType": "cath_lab",
+          "minCount": 1
+        },
+        {
+          "resourceType": "cardiologist",
+          "minCount": 1
+        },
+        {
+          "resourceType": "icu_bed",
+          "minCount": 1
+        }
+      ],
+      "requiredSpecialties": [
+        "cardiology"
+      ],
+      "preferredResources": [
+        "ventilator"
+      ],
+      "preferredSpecialties": [],
+      "status": "registered",
+      "createdAt": "2026-10-13T08:54:00Z",
+      "fictional": true
+    },
+    "hospitals": [
+      {
+        "hospitalId": "H01",
+        "name": "Crescent Heart Institute",
+        "location": {
+          "lat": 24.8607,
+          "lng": 67.042
+        },
+        "specialties": [
+          "cardiology",
+          "cardiac surgery",
+          "internal medicine"
+        ],
+        "status": "operational",
+        "fictional": true
+      },
+      {
+        "hospitalId": "H02",
+        "name": "Seaview Medical Centre",
+        "location": {
+          "lat": 24.8138,
+          "lng": 67.03
+        },
+        "specialties": [
+          "emergency medicine",
+          "cardiology",
+          "general surgery",
+          "trauma surgery"
+        ],
+        "status": "operational",
+        "fictional": true
+      },
+      {
+        "hospitalId": "H03",
+        "name": "Northbridge General Hospital",
+        "location": {
+          "lat": 24.95,
+          "lng": 67.06
+        },
+        "specialties": [
+          "general medicine",
+          "general surgery",
+          "orthopedics",
+          "trauma surgery"
+        ],
+        "status": "operational",
+        "fictional": true
+      },
+      {
+        "hospitalId": "H04",
+        "name": "Palm Grove Hospital",
+        "location": {
+          "lat": 24.9,
+          "lng": 67.11
+        },
+        "specialties": [
+          "cardiology",
+          "general medicine"
+        ],
+        "status": "operational",
+        "fictional": true
+      }
+    ],
+    "resourceSnapshots": [
+      {
+        "snapshotId": "RS-0001",
+        "hospitalId": "H01",
+        "resourceType": "er_bed",
+        "availableCount": 6,
+        "totalCount": 20,
+        "reportedAt": "2026-10-13T07:34:00Z",
+        "verifiedAt": "2026-10-13T07:34:00Z",
+        "reportedBy": "h01.ops",
+        "version": 2
+      },
+      {
+        "snapshotId": "RS-0002",
+        "hospitalId": "H01",
+        "resourceType": "er_bed",
+        "availableCount": 5,
+        "totalCount": 20,
+        "reportedAt": "2026-10-13T08:52:00Z",
+        "verifiedAt": "2026-10-13T08:52:00Z",
+        "reportedBy": "h01.ops",
+        "version": 3
+      },
+      {
+        "snapshotId": "RS-0003",
+        "hospitalId": "H01",
+        "resourceType": "icu_bed",
+        "availableCount": 4,
+        "totalCount": 12,
+        "reportedAt": "2026-10-13T07:35:00Z",
+        "verifiedAt": "2026-10-13T07:35:00Z",
+        "reportedBy": "h01.ops",
+        "version": 2
+      },
+      {
+        "snapshotId": "RS-0004",
+        "hospitalId": "H01",
+        "resourceType": "icu_bed",
+        "availableCount": 3,
+        "totalCount": 12,
+        "reportedAt": "2026-10-13T08:48:00Z",
+        "verifiedAt": "2026-10-13T08:48:00Z",
+        "reportedBy": "h01.ops",
+        "version": 3
+      },
+      {
+        "snapshotId": "RS-0005",
+        "hospitalId": "H01",
+        "resourceType": "cath_lab",
+        "availableCount": 1,
+        "totalCount": 2,
+        "reportedAt": "2026-10-13T07:03:00Z",
+        "verifiedAt": "2026-10-13T07:03:00Z",
+        "reportedBy": "h01.ops",
+        "version": 2
+      },
+      {
+        "snapshotId": "RS-0006",
+        "hospitalId": "H01",
+        "resourceType": "cath_lab",
+        "availableCount": 1,
+        "totalCount": 2,
+        "reportedAt": "2026-10-13T08:40:00Z",
+        "verifiedAt": "2026-10-13T08:40:00Z",
+        "reportedBy": "h01.ops",
+        "version": 3
+      },
+      {
+        "snapshotId": "RS-0007",
+        "hospitalId": "H01",
+        "resourceType": "cardiologist",
+        "availableCount": 3,
+        "totalCount": 3,
+        "reportedAt": "2026-10-13T06:25:00Z",
+        "verifiedAt": "2026-10-13T06:25:00Z",
+        "reportedBy": "h01.ops",
+        "version": 1
+      },
+      {
+        "snapshotId": "RS-0008",
+        "hospitalId": "H01",
+        "resourceType": "cardiologist",
+        "availableCount": 1,
+        "totalCount": 3,
+        "reportedAt": "2026-10-13T07:28:00Z",
+        "verifiedAt": "2026-10-13T07:28:00Z",
+        "reportedBy": "h01.ops",
+        "version": 2
+      },
+      {
+        "snapshotId": "RS-0009",
+        "hospitalId": "H01",
+        "resourceType": "cardiologist",
+        "availableCount": 2,
+        "totalCount": 3,
+        "reportedAt": "2026-10-13T08:45:00Z",
+        "verifiedAt": "2026-10-13T08:45:00Z",
+        "reportedBy": "h01.ops",
+        "version": 3
+      },
+      {
+        "snapshotId": "RS-0010",
+        "hospitalId": "H01",
+        "resourceType": "ventilator",
+        "availableCount": 4,
+        "totalCount": 10,
+        "reportedAt": "2026-10-13T07:06:00Z",
+        "verifiedAt": "2026-10-13T07:06:00Z",
+        "reportedBy": "h01.ops",
+        "version": 2
+      },
+      {
+        "snapshotId": "RS-0011",
+        "hospitalId": "H01",
+        "resourceType": "ventilator",
+        "availableCount": 4,
+        "totalCount": 10,
+        "reportedAt": "2026-10-13T08:20:00Z",
+        "verifiedAt": "2026-10-13T08:20:00Z",
+        "reportedBy": "h01.ops",
+        "version": 3
+      },
+      {
+        "snapshotId": "RS-0012",
+        "hospitalId": "H01",
+        "resourceType": "ct_scanner",
+        "availableCount": 1,
+        "totalCount": 1,
+        "reportedAt": "2026-10-13T06:35:00Z",
+        "verifiedAt": "2026-10-13T06:35:00Z",
+        "reportedBy": "h01.ops",
+        "version": 2
+      },
+      {
+        "snapshotId": "RS-0013",
+        "hospitalId": "H01",
+        "resourceType": "ct_scanner",
+        "availableCount": 1,
+        "totalCount": 1,
+        "reportedAt": "2026-10-13T08:10:00Z",
+        "verifiedAt": "2026-10-13T08:10:00Z",
+        "reportedBy": "h01.ops",
+        "version": 3
+      },
+      {
+        "snapshotId": "RS-0014",
+        "hospitalId": "H02",
+        "resourceType": "er_bed",
+        "availableCount": 5,
+        "totalCount": 25,
+        "reportedAt": "2026-10-13T06:35:00Z",
+        "verifiedAt": "2026-10-13T06:35:00Z",
+        "reportedBy": "h02.ops",
+        "version": 1
+      },
+      {
+        "snapshotId": "RS-0015",
+        "hospitalId": "H02",
+        "resourceType": "er_bed",
+        "availableCount": 7,
+        "totalCount": 25,
+        "reportedAt": "2026-10-13T07:49:00Z",
+        "verifiedAt": "2026-10-13T07:49:00Z",
+        "reportedBy": "h02.ops",
+        "version": 2
+      },
+      {
+        "snapshotId": "RS-0016",
+        "hospitalId": "H02",
+        "resourceType": "er_bed",
+        "availableCount": 6,
+        "totalCount": 25,
+        "reportedAt": "2026-10-13T08:55:00Z",
+        "verifiedAt": "2026-10-13T08:55:00Z",
+        "reportedBy": "h02.ops",
+        "version": 3
+      },
+      {
+        "snapshotId": "RS-0017",
+        "hospitalId": "H02",
+        "resourceType": "icu_bed",
+        "availableCount": 1,
+        "totalCount": 10,
+        "reportedAt": "2026-10-13T05:48:00Z",
+        "verifiedAt": null,
+        "reportedBy": "h02.ops",
+        "version": 2
+      },
+      {
+        "snapshotId": "RS-0018",
+        "hospitalId": "H02",
+        "resourceType": "icu_bed",
+        "availableCount": 2,
+        "totalCount": 10,
+        "reportedAt": "2026-10-13T07:25:00Z",
+        "verifiedAt": null,
+        "reportedBy": "h02.ops",
+        "version": 3
+      },
+      {
+        "snapshotId": "RS-0019",
+        "hospitalId": "H02",
+        "resourceType": "cath_lab",
+        "availableCount": 1,
+        "totalCount": 1,
+        "reportedAt": "2026-10-13T07:01:00Z",
+        "verifiedAt": "2026-10-13T07:01:00Z",
+        "reportedBy": "h02.ops",
+        "version": 2
+      },
+      {
+        "snapshotId": "RS-0020",
+        "hospitalId": "H02",
+        "resourceType": "cath_lab",
+        "availableCount": 1,
+        "totalCount": 1,
+        "reportedAt": "2026-10-13T08:35:00Z",
+        "verifiedAt": "2026-10-13T08:35:00Z",
+        "reportedBy": "h02.ops",
+        "version": 3
+      },
+      {
+        "snapshotId": "RS-0021",
+        "hospitalId": "H02",
+        "resourceType": "cardiologist",
+        "availableCount": 2,
+        "totalCount": 2,
+        "reportedAt": "2026-10-13T05:58:00Z",
+        "verifiedAt": "2026-10-13T05:58:00Z",
+        "reportedBy": "h02.ops",
+        "version": 1
+      },
+      {
+        "snapshotId": "RS-0022",
+        "hospitalId": "H02",
+        "resourceType": "cardiologist",
+        "availableCount": 0,
+        "totalCount": 2,
+        "reportedAt": "2026-10-13T07:13:00Z",
+        "verifiedAt": "2026-10-13T07:13:00Z",
+        "reportedBy": "h02.ops",
+        "version": 2
+      },
+      {
+        "snapshotId": "RS-0023",
+        "hospitalId": "H02",
+        "resourceType": "cardiologist",
+        "availableCount": 1,
+        "totalCount": 2,
+        "reportedAt": "2026-10-13T08:30:00Z",
+        "verifiedAt": "2026-10-13T08:30:00Z",
+        "reportedBy": "h02.ops",
+        "version": 3
+      },
+      {
+        "snapshotId": "RS-0024",
+        "hospitalId": "H02",
+        "resourceType": "ct_scanner",
+        "availableCount": 2,
+        "totalCount": 2,
+        "reportedAt": "2026-10-13T05:43:00Z",
+        "verifiedAt": "2026-10-13T05:43:00Z",
+        "reportedBy": "h02.ops",
+        "version": 1
+      },
+      {
+        "snapshotId": "RS-0025",
+        "hospitalId": "H02",
+        "resourceType": "ct_scanner",
+        "availableCount": 1,
+        "totalCount": 2,
+        "reportedAt": "2026-10-13T06:28:00Z",
+        "verifiedAt": "2026-10-13T06:28:00Z",
+        "reportedBy": "h02.ops",
+        "version": 2
+      },
+      {
+        "snapshotId": "RS-0026",
+        "hospitalId": "H02",
+        "resourceType": "ct_scanner",
+        "availableCount": 1,
+        "totalCount": 2,
+        "reportedAt": "2026-10-13T08:00:00Z",
+        "verifiedAt": "2026-10-13T08:00:00Z",
+        "reportedBy": "h02.ops",
+        "version": 3
+      },
+      {
+        "snapshotId": "RS-0027",
+        "hospitalId": "H02",
+        "resourceType": "operating_theatre",
+        "availableCount": 1,
+        "totalCount": 6,
+        "reportedAt": "2026-10-13T07:29:00Z",
+        "verifiedAt": "2026-10-13T07:29:00Z",
+        "reportedBy": "h02.ops",
+        "version": 2
+      },
+      {
+        "snapshotId": "RS-0028",
+        "hospitalId": "H02",
+        "resourceType": "operating_theatre",
+        "availableCount": 2,
+        "totalCount": 6,
+        "reportedAt": "2026-10-13T08:40:00Z",
+        "verifiedAt": "2026-10-13T08:40:00Z",
+        "reportedBy": "h02.ops",
+        "version": 3
+      },
+      {
+        "snapshotId": "RS-0029",
+        "hospitalId": "H02",
+        "resourceType": "blood_bank",
+        "availableCount": 0,
+        "totalCount": 1,
+        "reportedAt": "2026-10-13T05:41:00Z",
+        "verifiedAt": "2026-10-13T05:41:00Z",
+        "reportedBy": "h02.ops",
+        "version": 2
+      },
+      {
+        "snapshotId": "RS-0030",
+        "hospitalId": "H02",
+        "resourceType": "blood_bank",
+        "availableCount": 1,
+        "totalCount": 1,
+        "reportedAt": "2026-10-13T07:20:00Z",
+        "verifiedAt": "2026-10-13T07:20:00Z",
+        "reportedBy": "h02.ops",
+        "version": 3
+      },
+      {
+        "snapshotId": "RS-0031",
+        "hospitalId": "H02",
+        "resourceType": "trauma_team",
+        "availableCount": 1,
+        "totalCount": 1,
+        "reportedAt": "2026-10-13T06:59:00Z",
+        "verifiedAt": "2026-10-13T06:59:00Z",
+        "reportedBy": "h02.ops",
+        "version": 2
+      },
+      {
+        "snapshotId": "RS-0032",
+        "hospitalId": "H02",
+        "resourceType": "trauma_team",
+        "availableCount": 1,
+        "totalCount": 1,
+        "reportedAt": "2026-10-13T08:30:00Z",
+        "verifiedAt": "2026-10-13T08:30:00Z",
+        "reportedBy": "h02.ops",
+        "version": 3
+      },
+      {
+        "snapshotId": "RS-0033",
+        "hospitalId": "H03",
+        "resourceType": "er_bed",
+        "availableCount": 9,
+        "totalCount": 30,
+        "reportedAt": "2026-10-13T06:40:00Z",
+        "verifiedAt": "2026-10-13T06:40:00Z",
+        "reportedBy": "h03.ops",
+        "version": 1
+      },
+      {
+        "snapshotId": "RS-0034",
+        "hospitalId": "H03",
+        "resourceType": "er_bed",
+        "availableCount": 9,
+        "totalCount": 30,
+        "reportedAt": "2026-10-13T07:39:00Z",
+        "verifiedAt": "2026-10-13T07:39:00Z",
+        "reportedBy": "h03.ops",
+        "version": 2
+      },
+      {
+        "snapshotId": "RS-0035",
+        "hospitalId": "H03",
+        "resourceType": "er_bed",
+        "availableCount": 8,
+        "totalCount": 30,
+        "reportedAt": "2026-10-13T08:50:00Z",
+        "verifiedAt": "2026-10-13T08:50:00Z",
+        "reportedBy": "h03.ops",
+        "version": 3
+      },
+      {
+        "snapshotId": "RS-0036",
+        "hospitalId": "H03",
+        "resourceType": "icu_bed",
+        "availableCount": 5,
+        "totalCount": 15,
+        "reportedAt": "2026-10-13T07:11:00Z",
+        "verifiedAt": "2026-10-13T07:11:00Z",
+        "reportedBy": "h03.ops",
+        "version": 2
+      },
+      {
+        "snapshotId": "RS-0037",
+        "hospitalId": "H03",
+        "resourceType": "icu_bed",
+        "availableCount": 4,
+        "totalCount": 15,
+        "reportedAt": "2026-10-13T08:42:00Z",
+        "verifiedAt": "2026-10-13T08:42:00Z",
+        "reportedBy": "h03.ops",
+        "version": 3
+      },
+      {
+        "snapshotId": "RS-0038",
+        "hospitalId": "H03",
+        "resourceType": "ct_scanner",
+        "availableCount": 2,
+        "totalCount": 2,
+        "reportedAt": "2026-10-13T07:23:00Z",
+        "verifiedAt": "2026-10-13T07:23:00Z",
+        "reportedBy": "h03.ops",
+        "version": 2
+      },
+      {
+        "snapshotId": "RS-0039",
+        "hospitalId": "H03",
+        "resourceType": "ct_scanner",
+        "availableCount": 2,
+        "totalCount": 2,
+        "reportedAt": "2026-10-13T08:30:00Z",
+        "verifiedAt": "2026-10-13T08:30:00Z",
+        "reportedBy": "h03.ops",
+        "version": 3
+      },
+      {
+        "snapshotId": "RS-0040",
+        "hospitalId": "H03",
+        "resourceType": "operating_theatre",
+        "availableCount": 2,
+        "totalCount": 8,
+        "reportedAt": "2026-10-13T07:25:00Z",
+        "verifiedAt": "2026-10-13T07:25:00Z",
+        "reportedBy": "h03.ops",
+        "version": 2
+      },
+      {
+        "snapshotId": "RS-0041",
+        "hospitalId": "H03",
+        "resourceType": "operating_theatre",
+        "availableCount": 3,
+        "totalCount": 8,
+        "reportedAt": "2026-10-13T08:45:00Z",
+        "verifiedAt": "2026-10-13T08:45:00Z",
+        "reportedBy": "h03.ops",
+        "version": 3
+      },
+      {
+        "snapshotId": "RS-0042",
+        "hospitalId": "H03",
+        "resourceType": "blood_bank",
+        "availableCount": 1,
+        "totalCount": 1,
+        "reportedAt": "2026-10-13T06:53:00Z",
+        "verifiedAt": "2026-10-13T06:53:00Z",
+        "reportedBy": "h03.ops",
+        "version": 2
+      },
+      {
+        "snapshotId": "RS-0043",
+        "hospitalId": "H03",
+        "resourceType": "blood_bank",
+        "availableCount": 1,
+        "totalCount": 1,
+        "reportedAt": "2026-10-13T08:15:00Z",
+        "verifiedAt": "2026-10-13T08:15:00Z",
+        "reportedBy": "h03.ops",
+        "version": 3
+      },
+      {
+        "snapshotId": "RS-0044",
+        "hospitalId": "H03",
+        "resourceType": "trauma_team",
+        "availableCount": 1,
+        "totalCount": 1,
+        "reportedAt": "2026-10-13T06:08:00Z",
+        "verifiedAt": "2026-10-13T06:08:00Z",
+        "reportedBy": "h03.ops",
+        "version": 1
+      },
+      {
+        "snapshotId": "RS-0045",
+        "hospitalId": "H03",
+        "resourceType": "trauma_team",
+        "availableCount": 0,
+        "totalCount": 1,
+        "reportedAt": "2026-10-13T07:06:00Z",
+        "verifiedAt": "2026-10-13T07:06:00Z",
+        "reportedBy": "h03.ops",
+        "version": 2
+      },
+      {
+        "snapshotId": "RS-0046",
+        "hospitalId": "H03",
+        "resourceType": "trauma_team",
+        "availableCount": 1,
+        "totalCount": 1,
+        "reportedAt": "2026-10-13T08:35:00Z",
+        "verifiedAt": "2026-10-13T08:35:00Z",
+        "reportedBy": "h03.ops",
+        "version": 3
+      },
+      {
+        "snapshotId": "RS-0047",
+        "hospitalId": "H04",
+        "resourceType": "er_bed",
+        "availableCount": 3,
+        "totalCount": 15,
+        "reportedAt": "2026-10-13T07:34:00Z",
+        "verifiedAt": "2026-10-13T07:34:00Z",
+        "reportedBy": "h04.ops",
+        "version": 2
+      },
+      {
+        "snapshotId": "RS-0048",
+        "hospitalId": "H04",
+        "resourceType": "er_bed",
+        "availableCount": 4,
+        "totalCount": 15,
+        "reportedAt": "2026-10-13T08:48:00Z",
+        "verifiedAt": "2026-10-13T08:48:00Z",
+        "reportedBy": "h04.ops",
+        "version": 3
+      },
+      {
+        "snapshotId": "RS-0049",
+        "hospitalId": "H04",
+        "resourceType": "icu_bed",
+        "availableCount": 1,
+        "totalCount": 8,
+        "reportedAt": "2026-10-13T02:25:00Z",
+        "verifiedAt": "2026-10-13T02:25:00Z",
+        "reportedBy": "h04.ops",
+        "version": 2
+      },
+      {
+        "snapshotId": "RS-0050",
+        "hospitalId": "H04",
+        "resourceType": "icu_bed",
+        "availableCount": 2,
+        "totalCount": 8,
+        "reportedAt": "2026-10-13T04:00:00Z",
+        "verifiedAt": "2026-10-13T04:00:00Z",
+        "reportedBy": "h04.ops",
+        "version": 3
+      },
+      {
+        "snapshotId": "RS-0051",
+        "hospitalId": "H04",
+        "resourceType": "cath_lab",
+        "availableCount": 0,
+        "totalCount": 1,
+        "reportedAt": "2026-10-13T07:13:00Z",
+        "verifiedAt": "2026-10-13T07:13:00Z",
+        "reportedBy": "h04.ops",
+        "version": 2
+      },
+      {
+        "snapshotId": "RS-0052",
+        "hospitalId": "H04",
+        "resourceType": "cath_lab",
+        "availableCount": 1,
+        "totalCount": 1,
+        "reportedAt": "2026-10-13T08:20:00Z",
+        "verifiedAt": "2026-10-13T08:20:00Z",
+        "reportedBy": "h04.ops",
+        "version": 3
+      },
+      {
+        "snapshotId": "RS-0053",
+        "hospitalId": "H04",
+        "resourceType": "cardiologist",
+        "availableCount": 1,
+        "totalCount": 1,
+        "reportedAt": "2026-10-13T06:17:00Z",
+        "verifiedAt": "2026-10-13T06:17:00Z",
+        "reportedBy": "h04.ops",
+        "version": 1
+      },
+      {
+        "snapshotId": "RS-0054",
+        "hospitalId": "H04",
+        "resourceType": "cardiologist",
+        "availableCount": 1,
+        "totalCount": 1,
+        "reportedAt": "2026-10-13T06:53:00Z",
+        "verifiedAt": "2026-10-13T06:53:00Z",
+        "reportedBy": "h04.ops",
+        "version": 2
+      },
+      {
+        "snapshotId": "RS-0055",
+        "hospitalId": "H04",
+        "resourceType": "cardiologist",
+        "availableCount": 1,
+        "totalCount": 1,
+        "reportedAt": "2026-10-13T08:25:00Z",
+        "verifiedAt": "2026-10-13T08:25:00Z",
+        "reportedBy": "h04.ops",
+        "version": 3
+      }
+    ],
+    "travelEstimates": [
+      {
+        "hospitalId": "H01",
+        "etaMinMinutes": 14,
+        "etaMaxMinutes": 17,
+        "source": "live_traffic",
+        "estimatedAt": "2026-10-13T09:00:00Z"
+      },
+      {
+        "hospitalId": "H02",
+        "etaMinutes": 8,
+        "source": "map_routing",
+        "estimatedAt": "2026-10-13T09:00:00Z"
+      },
+      {
+        "hospitalId": "H03",
+        "etaMinMinutes": 11,
+        "etaMaxMinutes": 13,
+        "source": "live_traffic",
+        "estimatedAt": "2026-10-13T09:00:00Z"
+      },
+      {
+        "hospitalId": "H04",
+        "etaMinutes": 16,
+        "source": "map_routing",
+        "estimatedAt": "2026-10-13T09:00:00Z"
+      }
+    ],
+    "referenceTime": "2026-10-13T09:05:00Z",
+    "referralHistory": [
+      {
+        "hospitalId": "H01",
+        "requestStatus": "rejected",
+        "requestedAt": "2026-10-13T09:01:00Z",
+        "responseAt": "2026-10-13T09:04:00Z"
+      }
+    ]
+  }
+}

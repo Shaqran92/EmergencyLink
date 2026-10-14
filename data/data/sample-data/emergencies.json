@@ -1,0 +1,312 @@
+[
+  {
+    "caseId": "EL-0001",
+    "priorityCategory": "P1",
+    "operationalSummary": "Suspected cardiac emergency \u2014 needs cath lab",
+    "location": {
+      "lat": 24.86,
+      "lng": 67.01
+    },
+    "requiredResources": [
+      {
+        "resourceType": "er_bed",
+        "minCount": 1
+      },
+      {
+        "resourceType": "cath_lab",
+        "minCount": 1
+      },
+      {
+        "resourceType": "cardiologist",
+        "minCount": 1
+      },
+      {
+        "resourceType": "icu_bed",
+        "minCount": 1
+      }
+    ],
+    "requiredSpecialties": [
+      "cardiology"
+    ],
+    "preferredResources": [
+      "ventilator"
+    ],
+    "preferredSpecialties": [],
+    "status": "registered",
+    "createdAt": "2026-10-13T08:54:00Z",
+    "fictional": true
+  },
+  {
+    "caseId": "EL-0002",
+    "priorityCategory": "P1",
+    "operationalSummary": "Major trauma \u2014 road traffic collision",
+    "location": {
+      "lat": 24.91,
+      "lng": 67.03
+    },
+    "requiredResources": [
+      {
+        "resourceType": "trauma_team",
+        "minCount": 1
+      },
+      {
+        "resourceType": "operating_theatre",
+        "minCount": 1
+      },
+      {
+        "resourceType": "ct_scanner",
+        "minCount": 1
+      },
+      {
+        "resourceType": "blood_bank",
+        "minCount": 1
+      },
+      {
+        "resourceType": "icu_bed",
+        "minCount": 1
+      }
+    ],
+    "requiredSpecialties": [
+      "trauma surgery"
+    ],
+    "preferredResources": [
+      "neurosurgeon"
+    ],
+    "preferredSpecialties": [],
+    "status": "registered",
+    "createdAt": "2026-10-13T08:55:00Z",
+    "fictional": true
+  },
+  {
+    "caseId": "EL-0003",
+    "priorityCategory": "P1",
+    "operationalSummary": "Suspected stroke \u2014 needs CT",
+    "location": {
+      "lat": 24.94,
+      "lng": 67.08
+    },
+    "requiredResources": [
+      {
+        "resourceType": "er_bed",
+        "minCount": 1
+      },
+      {
+        "resourceType": "ct_scanner",
+        "minCount": 1
+      }
+    ],
+    "requiredSpecialties": [
+      "neurology"
+    ],
+    "preferredResources": [
+      "mri_scanner",
+      "neurosurgeon"
+    ],
+    "preferredSpecialties": [],
+    "status": "registered",
+    "createdAt": "2026-10-13T08:55:00Z",
+    "fictional": true
+  },
+  {
+    "caseId": "EL-0004",
+    "priorityCategory": "P2",
+    "operationalSummary": "Burn injury",
+    "location": {
+      "lat": 24.88,
+      "lng": 67.05
+    },
+    "requiredResources": [
+      {
+        "resourceType": "burn_bed",
+        "minCount": 1
+      },
+      {
+        "resourceType": "icu_bed",
+        "minCount": 1
+      }
+    ],
+    "requiredSpecialties": [
+      "burns"
+    ],
+    "preferredResources": [
+      "ventilator"
+    ],
+    "preferredSpecialties": [],
+    "status": "registered",
+    "createdAt": "2026-10-13T08:57:00Z",
+    "fictional": true
+  },
+  {
+    "caseId": "EL-0005",
+    "priorityCategory": "P1",
+    "operationalSummary": "Obstetric emergency",
+    "location": {
+      "lat": 24.96,
+      "lng": 67.12
+    },
+    "requiredResources": [
+      {
+        "resourceType": "obstetrician",
+        "minCount": 1
+      },
+      {
+        "resourceType": "operating_theatre",
+        "minCount": 1
+      },
+      {
+        "resourceType": "blood_bank",
+        "minCount": 1
+      }
+    ],
+    "requiredSpecialties": [
+      "obstetrics"
+    ],
+    "preferredResources": [
+      "nicu_bed"
+    ],
+    "preferredSpecialties": [],
+    "status": "registered",
+    "createdAt": "2026-10-13T08:56:00Z",
+    "fictional": true
+  },
+  {
+    "caseId": "EL-0006",
+    "priorityCategory": "P2",
+    "operationalSummary": "Paediatric respiratory distress",
+    "location": {
+      "lat": 24.9,
+      "lng": 67.08
+    },
+    "requiredResources": [
+      {
+        "resourceType": "er_bed",
+        "minCount": 1
+      },
+      {
+        "resourceType": "pediatrician",
+        "minCount": 1
+      }
+    ],
+    "requiredSpecialties": [
+      "pediatrics"
+    ],
+    "preferredResources": [
+      "ventilator"
+    ],
+    "preferredSpecialties": [],
+    "status": "registered",
+    "createdAt": "2026-10-13T08:55:00Z",
+    "fictional": true
+  },
+  {
+    "caseId": "EL-0007",
+    "priorityCategory": "P1",
+    "operationalSummary": "Multi-patient collision (3 patients)",
+    "location": {
+      "lat": 24.87,
+      "lng": 67.03
+    },
+    "requiredResources": [
+      {
+        "resourceType": "er_bed",
+        "minCount": 3
+      },
+      {
+        "resourceType": "trauma_team",
+        "minCount": 1
+      },
+      {
+        "resourceType": "blood_bank",
+        "minCount": 1
+      }
+    ],
+    "requiredSpecialties": [
+      "trauma surgery"
+    ],
+    "preferredResources": [
+      "ct_scanner"
+    ],
+    "preferredSpecialties": [],
+    "status": "registered",
+    "createdAt": "2026-10-13T08:59:00Z",
+    "fictional": true
+  },
+  {
+    "caseId": "EL-0008",
+    "priorityCategory": "P2",
+    "operationalSummary": "Cardiac case \u2014 caller location not yet known",
+    "location": null,
+    "requiredResources": [
+      {
+        "resourceType": "er_bed",
+        "minCount": 1
+      },
+      {
+        "resourceType": "cath_lab",
+        "minCount": 1
+      },
+      {
+        "resourceType": "cardiologist",
+        "minCount": 1
+      }
+    ],
+    "requiredSpecialties": [
+      "cardiology"
+    ],
+    "preferredResources": [],
+    "preferredSpecialties": [],
+    "status": "registered",
+    "createdAt": "2026-10-13T08:58:00Z",
+    "fictional": true
+  },
+  {
+    "caseId": "EL-0009",
+    "priorityCategory": "P3",
+    "operationalSummary": "Minor injury needing ER assessment",
+    "location": {
+      "lat": 24.85,
+      "lng": 67.06
+    },
+    "requiredResources": [
+      {
+        "resourceType": "er_bed",
+        "minCount": 1
+      }
+    ],
+    "requiredSpecialties": [],
+    "preferredResources": [
+      "ct_scanner"
+    ],
+    "preferredSpecialties": [],
+    "status": "registered",
+    "createdAt": "2026-10-13T08:54:00Z",
+    "fictional": true
+  },
+  {
+    "caseId": "EL-0010",
+    "priorityCategory": "P2",
+    "operationalSummary": "Needs urgent dialysis",
+    "location": {
+      "lat": 24.89,
+      "lng": 67.07
+    },
+    "requiredResources": [
+      {
+        "resourceType": "er_bed",
+        "minCount": 1
+      },
+      {
+        "resourceType": "dialysis",
+        "minCount": 1
+      }
+    ],
+    "requiredSpecialties": [
+      "nephrology"
+    ],
+    "preferredResources": [],
+    "preferredSpecialties": [],
+    "status": "registered",
+    "createdAt": "2026-10-13T08:59:00Z",
+    "fictional": true
+  }
+]

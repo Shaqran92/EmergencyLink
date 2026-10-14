@@ -1,0 +1,195 @@
+[
+  {
+    "hospitalId": "H01",
+    "name": "Crescent Heart Institute",
+    "location": {
+      "lat": 24.8607,
+      "lng": 67.042
+    },
+    "specialties": [
+      "cardiology",
+      "cardiac surgery",
+      "internal medicine"
+    ],
+    "status": "operational",
+    "fictional": true,
+    "_designNote": "Fresh, verified cardiac centre"
+  },
+  {
+    "hospitalId": "H02",
+    "name": "Seaview Medical Centre",
+    "location": {
+      "lat": 24.8138,
+      "lng": 67.03
+    },
+    "specialties": [
+      "emergency medicine",
+      "cardiology",
+      "general surgery",
+      "trauma surgery"
+    ],
+    "status": "operational",
+    "fictional": true,
+    "_designNote": "Closest to Saddar but ICU-bed report is STALE and UNVERIFIED"
+  },
+  {
+    "hospitalId": "H03",
+    "name": "Northbridge General Hospital",
+    "location": {
+      "lat": 24.95,
+      "lng": 67.06
+    },
+    "specialties": [
+      "general medicine",
+      "general surgery",
+      "orthopedics",
+      "trauma surgery"
+    ],
+    "status": "operational",
+    "fictional": true,
+    "_designNote": "Good capacity, NO cath lab / cardiology (excluded for cardiac cases)"
+  },
+  {
+    "hospitalId": "H04",
+    "name": "Palm Grove Hospital",
+    "location": {
+      "lat": 24.9,
+      "lng": 67.11
+    },
+    "specialties": [
+      "cardiology",
+      "general medicine"
+    ],
+    "status": "operational",
+    "fictional": true,
+    "_designNote": "ICU-bed report EXPIRED (5 h old) \u2192 needs confirmation"
+  },
+  {
+    "hospitalId": "H05",
+    "name": "Meridian Trauma Centre",
+    "location": {
+      "lat": 24.89,
+      "lng": 67.025
+    },
+    "specialties": [
+      "trauma surgery",
+      "neurosurgery",
+      "orthopedics",
+      "general surgery"
+    ],
+    "status": "operational",
+    "fictional": true,
+    "_designNote": "Dedicated trauma centre, tight ICU/theatre capacity"
+  },
+  {
+    "hospitalId": "H06",
+    "name": "Lotus Women & Children Hospital",
+    "location": {
+      "lat": 24.92,
+      "lng": 67.09
+    },
+    "specialties": [
+      "obstetrics",
+      "pediatrics",
+      "neonatology"
+    ],
+    "status": "operational",
+    "fictional": true,
+    "_designNote": "Maternal & paediatric specialist"
+  },
+  {
+    "hospitalId": "H07",
+    "name": "Sunrise Burns & Plastic Surgery Unit",
+    "location": {
+      "lat": 24.87,
+      "lng": 67.07
+    },
+    "specialties": [
+      "burns",
+      "plastic surgery"
+    ],
+    "status": "operational",
+    "fictional": true,
+    "_designNote": "Only 1 burn bed left (shortage warning)"
+  },
+  {
+    "hospitalId": "H08",
+    "name": "Riverside Neuro Centre",
+    "location": {
+      "lat": 24.93,
+      "lng": 67.04
+    },
+    "specialties": [
+      "neurology",
+      "neurosurgery"
+    ],
+    "status": "operational",
+    "fictional": true,
+    "_designNote": "CONFLICTING CT-scanner reports from two staff members"
+  },
+  {
+    "hospitalId": "H09",
+    "name": "Greenfield District Hospital",
+    "location": {
+      "lat": 25.0,
+      "lng": 67.15
+    },
+    "specialties": [
+      "general medicine",
+      "obstetrics",
+      "pediatrics"
+    ],
+    "status": "operational",
+    "fictional": true,
+    "_designNote": "Mostly UNVERIFIED reports + a FUTURE-dated record (clock error)"
+  },
+  {
+    "hospitalId": "H10",
+    "name": "Eastgate Community Hospital",
+    "location": {
+      "lat": 24.88,
+      "lng": 67.16
+    },
+    "specialties": [
+      "general medicine"
+    ],
+    "status": "diverting",
+    "fictional": true,
+    "_designNote": "On DIVERSION (excluded)"
+  },
+  {
+    "hospitalId": "H11",
+    "name": "Harborline Medical College Hospital",
+    "location": {
+      "lat": 24.85,
+      "lng": 66.99
+    },
+    "specialties": [
+      "cardiology",
+      "neurosurgery",
+      "neurology",
+      "trauma surgery",
+      "general surgery",
+      "obstetrics",
+      "pediatrics",
+      "burns",
+      "nephrology",
+      "general medicine"
+    ],
+    "status": "operational",
+    "fictional": true,
+    "_designNote": "Large multi-specialty; some stale reports, a missing totalCount, burn beds full"
+  },
+  {
+    "hospitalId": "H12",
+    "name": "Saffron Valley Hospital",
+    "location": null,
+    "specialties": [
+      "general medicine",
+      "nephrology"
+    ],
+    "status": "operational",
+    "fictional": true,
+    "_designNote": "LOCATION MISSING \u2192 ETA unknown, score incomplete"
+  }
+]
